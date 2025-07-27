@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Infinite Loop - Bootstrap 4.0 HTML Template</title>
+
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+
+    <style>
+      /* --- About Page Specific Body Sections --- */
+
+/* About Section */
+/* This section introduces your company with text and an image. */
+.tm-about-section {
+    padding-top: 80px; /* Space above the section */
+    padding-bottom: 80px; /* Space below the section */
+    background-color: #f8f9fa; /* A light, subtle background for distinction */
+}
+
+.tm-about-heading {
+    color: #007bff; /* Bootstrap primary blue for headings */
+    margin-bottom: 30px; /* Space below the heading */
+    font-size: 2.5rem; /* Large and prominent heading */
+    font-weight: 700; /* Bold font for impact */
+    line-height: 1.2; /* Better line spacing for multi-line headings */
+}
+
+.tm-about-text {
+    color: #555; /* Slightly darker grey for body text, good readability */
+    line-height: 1.8; /* Generous line height for improved readability */
+    font-size: 1.1rem; /* Comfortable reading size */
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Core Values Section */
+/* This section highlights your company's guiding principles. */
+.tm-values-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff; /* White background for clean contrast */
+    border-top: 1px solid #eee; /* Light separator from the previous section */
+}
+
+.tm-values-section .card {
+    border: none; /* Remove default Bootstrap card border */
+    border-radius: 10px; /* Rounded corners for the cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    /* Padding for inner content is handled by Bootstrap's p-4 */
+}
+
+.tm-values-section .card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* More prominent shadow on hover */
+}
+
+.tm-values-section .card-body i {
+    color: #007bff; /* Primary blue for icons */
+    margin-bottom: 15px; /* Space below the icon */
+}
+
+.tm-values-section .card-title {
+    font-weight: bold; /* Bold title for values */
+    color: #333; /* Dark text for titles */
+    font-size: 1.35rem; /* Readable title size */
+}
+
+.tm-values-section .card-text {
+    font-size: 0.95rem; /* Slightly smaller text for descriptions */
+    color: #666; /* Muted text color for descriptions */
+}
+
+/* Team Section */
+/* This section introduces your team members. */
+.tm-team-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: #f1f1f1; /* A slightly darker grey background than the main about section */
+    border-top: 1px solid #eee; /* Light separator */
+}
+
+/* Team Section - Enhanced Design */
+.tm-team-section .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Crucial for containing the image zoom and overlay */
+    position: relative; /* Needed for absolute positioning of overlay */
+    padding: 0; /* Remove padding from card itself, will add to body */
+}
+
+.tm-team-section .card-body {
+    padding: 1.5rem; /* Re-add padding to card-body for text content */
+}
+
+
+.tm-team-section .card:hover {
+    transform: translateY(-8px); /* Lift card slightly more on hover */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2); /* More prominent shadow on hover */
+}
+
+.tm-team-section .card-img-top {
+    border: 4px solid #007bff;
+    /* New: Grayscale and transition for hover effect */
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    transform: scale(1.0); /* Initial scale for zoom effect */
+}
+
+/* New: Hover effects for image */
+.tm-team-section .card:hover .card-img-top {
+    filter: grayscale(0%); /* Full color on hover */
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+}
+
+/* New: Team Overlay for social icons */
+.tm-team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Covers the entire card */
+    background-color: rgba(0, 123, 255, 0.7); /* Blue overlay with transparency */
+    border-radius: 10px; /* Match card border-radius */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for reveal */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure it's above the image */
+}
+
+/* New: Show overlay on card hover */
+.tm-team-section .card:hover .tm-team-overlay {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.tm-team-section .card-title {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.tm-team-section .text-muted {
+    color: #777 !important;
+}
+
+.tm-team-section .card-text.small {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Social links inside the overlay */
+.tm-team-overlay .social-links a {
+    color: #fff; /* White icons on the blue overlay */
+    font-size: 1.8rem; /* Larger icons for visibility */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tm-team-overlay .social-links a:hover {
+    color: #e2e6ea; /* Lighter white on hover */
+    transform: translateY(-3px); /* Small lift effect on icon hover */
+}
+
+/* Ensure the team member image within the overlay structure is still circular */
+.tm-team-section .card-img-top.rounded-circle {
+    /* These styles are already present in your HTML inline, but good to ensure: */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* Ensure z-index is lower than the overlay if image is part of overlay */
+    position: relative; /* Important for z-index to work */
+    z-index: 1;
+}
+
+/* Responsive adjustments for Team Section */
+@media (max-width: 768px) {
+    .tm-team-section .card-img-top {
+        width: 100px !important; /* Adjust image size for tablets */
+        height: 100px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .tm-team-section .card-img-top {
+        width: 80px !important; /* Smaller images on mobile */
+        height: 80px !important;
+    }
+}
+
+/* --- Overlapping Images Section (Circular) --- */
+
+.tm-overlapping-image {
+    position: absolute;   /* Keep images out of normal flow for overlapping */
+    aspect-ratio: 1 / 1;  /* Ensures a 1:1 aspect ratio (perfect square for circle) */
+    object-fit: cover;    /* Crops the image to fill the circular space without distortion */
+    border-radius: 50%;   /* Makes the image container a perfect circle */
+    overflow: hidden;     /* Hides any parts of the image that extend beyond the circle */
+    transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Keep the subtle shadow */
+}
+
+/* Individual positioning and sizing for each image */
+/* Adjust 'width' values and 'top/left/right/bottom' as needed for your desired layout */
+.tm-image-1 {
+    top: 0;
+    left: 10%;
+    width: 250px; /* Example fixed pixel width for a larger circle */
+    z-index: 5;
+}
+
+.tm-image-2 {
+    top: 50px;
+    right: 0;
+    width: 200px; /* Example fixed pixel width */
+    z-index: 4;
+}
+
+.tm-image-3 {
+    bottom: 0;
+    left: 0;
+    width: 280px; /* Example fixed pixel width */
+    z-index: 3;
+}
+
+.tm-image-4 {
+    top: 150px;
+    left: 40%;
+    width: 180px; /* Example fixed pixel width */
+    z-index: 2;
+}
+
+.tm-image-5 {
+    bottom: 50px;
+    right: 15%;
+    width: 150px; /* Example fixed pixel width */
+    z-index: 1;
+}
+
+/* Optional: Hover effect to bring an image to the front */
+.tm-overlapping-image:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    z-index: 10; /* Bring to front on hover */
+}
+
+/* Responsive adjustments for overlapping images */
+@media (max-width: 991.98px) { /* Adjust for smaller desktops/tablets */
+    .col-lg-6.position-relative {
+        min-height: 350px; /* Adjust min-height for responsiveness */
+        margin-top: 30px; /* Add some space above on smaller screens if text is above */
+    }
+
+    .tm-image-1 { top: 0; left: 5%; width: 180px; }
+    .tm-image-2 { top: 30px; right: 0; width: 150px; }
+    .tm-image-3 { bottom: 0; left: 0; width: 220px; }
+    .tm-image-4 { top: 120px; left: 30%; width: 140px; }
+    .tm-image-5 { bottom: 30px; right: 5%; width: 120px; }
+}
+
+@media (max-width: 767.98px) { /* Adjust for mobile devices */
+    .col-lg-6.position-relative {
+        min-height: 300px; /* Further reduce min-height */
+        margin-top: 20px;
+    }
+
+    /* Adjust positions and sizes more significantly for mobile */
+    .tm-image-1 { top: 0; left: 10%; width: 160px; z-index: 5; }
+    .tm-image-2 { top: 40px; right: 10%; width: 130px; z-index: 4; }
+    .tm-image-3 { bottom: 0; left: 0; width: 180px; z-index: 3; }
+    .tm-image-4 { top: 80px; left: 20%; width: 110px; z-index: 2; }
+    .tm-image-5 { bottom: 20px; right: 0; width: 90px; z-index: 1; }
+}
+
+@media (max-width: 575.98px) { /* Even smaller mobile screens */
+    .col-lg-6.position-relative {
+        min-height: 250px;
+    }
+    .tm-image-1 { width: 140px; }
+    .tm-image-2 { width: 110px; }
+    .tm-image-3 { width: 160px; }
+    .tm-image-4 { width: 90px; }
+    .tm-image-5 { width: 70px; }
+}
+    </style>
+  <body>
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+  <div class="container">
+    <div class="tm-next">
+      <a href="index.html" class="navbar-brand">IT Consulting Services</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars navbar-toggler-icon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link tm-nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+                    <a class="nav-link tm-nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                        <a class="dropdown-item" href="cloud-transformation.html">Cloud Transformation & Optimization</a>
+                        <a class="dropdown-item" href="cybersecurity-solutions.html">Robust Cybersecurity Solutions</a>
+                        <a class="dropdown-item" href="it-roadmap-development.html">Strategic IT Roadmap Development</a>
+                        <a class="dropdown-item" href="managed-it-services.html">Comprehensive Managed IT Services</a>
+                        <a class="dropdown-item" href="data-analytics.html">Data Analytics & Business Intelligence</a>
+                        <a class="dropdown-item" href="software-development.html">Custom Software Development</a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item font-weight-bold" href="services.html">View All Services</a>
+                    </div>
+                </li>
+        <li class="nav-item">
+          <a class="nav-link tm-nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      <div class="text-center tm-hero-text-container">
+    <div class="tm-hero-text-container-inner" data-aos="fade-up" data-aos-duration="1500">
+        <h1 class="tm-hero-title display-4 mb-4">About Us</h1>
+        <p class="tm-hero-subtitle lead mb-5">
+            Your Trusted Partner in Digital Innovation
+            <br />Innovate. Secure. Grow.
+        </p>
+    </div>
+</div>
+<div class="tm-next tm-intro-next position-absolute bottom-0 w-100 pb-4">
+    <a href="#whatwedo" class="text-center tm-down-arrow-link d-block">
+        <i class="fas fa-2x fa-arrow-down tm-down-arrow text-white"></i>
+    </a>
+</div>
+    </section>
+
+
+      <section id="about" class="tm-about-section py-5">
+        <div class="container">
+           <div class="row align-items-center mb-5">
+    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="tm-about-heading">Strategic IT Consulting: Enabling Your Future-Ready Enterprise</h2>
+        <p class="tm-about-text">
+            In an era defined by rapid technological evolution, **IT Consulting Services** stands as a steadfast partner, guiding organizations through the complexities of digital transformation to achieve sustainable growth and operational excellence. We are a collective of seasoned IT strategists, engineers, and solution architects, dedicated to delivering bespoke, data-driven outcomes that align precisely with your overarching business objectives.
+        </p>
+        <p class="tm-about-text">
+            Our methodology is rooted in **collaborative partnership**, **meticulous analysis**, and a **relentless pursuit of innovation**. We translate technological possibilities into tangible business value, ensuring your investments yield maximum return and fortify your position in the market.
+        </p>
+    </div>
+    <div class="col-lg-6 col-md-12 position-relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" style="min-height: 450px;">
+        <img src="img/testimonial-img-01.jpg" alt="Team collaborating" class="img-fluid rounded shadow-sm tm-overlapping-image tm-image-1">
+        <img src="img/testimonial-img-02.jpg" alt="Digital transformation concept" class="img-fluid rounded shadow-sm tm-overlapping-image tm-image-2">
+        <img src="img/testimonial-img-03.jpg" alt="Data analytics dashboard" class="img-fluid rounded shadow-sm tm-overlapping-image tm-image-3">
+        <img src="img/testimonial-img-04.jpg" alt="Cybersecurity lock" class="img-fluid rounded shadow-sm tm-overlapping-image tm-image-4">
+        <img src="img/testimonial-img-01.jpg" alt="Cloud computing" class="img-fluid rounded shadow-sm tm-overlapping-image tm-image-5">
+    </div>
+</div>
+</div>
+</section>
+<section>
+  <div class="container">
+            <div class="row tm-values-section py-4">
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="tm-about-heading">Our Core Values</h2>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card h-100 text-center shadow-sm p-4">
+                        <div class="card-body">
+                            <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title text-dark">Innovation</h5>
+                            <p class="card-text text-muted">Constantly seeking and applying cutting-edge technologies to drive progress and solve complex challenges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card h-100 text-center shadow-sm p-4">
+                        <div class="card-body">
+                            <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title text-dark">Partnership</h5>
+                            <p class="card-text text-muted">Building strong, trust-based relationships with our clients, working together towards shared success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="card h-100 text-center shadow-sm p-4">
+                        <div class="card-body">
+                            <i class="fas fa-check-circle fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title text-dark">Excellence</h5>
+                            <p class="card-text text-muted">Committed to the highest standards in every solution and service we deliver, ensuring quality and reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<section id="about" class="tm-about-section py-5">
+        <div class="container">
+           <div class="row align-items-center mb-5">
+
+                <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="tm-about-heading">Meet Our Team</h2>
+                    <p class="tm-about-text mx-auto" style="max-width: 700px;">
+                        Our team comprises dedicated experts with diverse backgrounds and extensive experience in all facets of IT consulting. We are passionate about technology and its power to transform businesses.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="card h-100 text-center shadow-sm p-3">
+                        <img src="img/testimonial-img-01.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Team Member 1" style="width: 150px; height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">John Doe</h5>
+                            <p class="text-muted mb-1">Founder & CEO</p>
+                            <p class="small text-muted">Specializing in Cloud Strategy & Digital Transformation.</p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="text-primary mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-primary mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+    <div class="card h-100 text-center shadow-sm p-3 tm-team-card">
+        <img src="img/testimonial-img-02.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Team Member 2" style="width: 150px; height: 150px; object-fit: cover;">
+
+        <div class="tm-team-overlay">
+            <div class="social-links d-flex justify-content-center align-items-center h-100">
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title text-dark">Jane Smith</h5>
+            <p class="text-muted mb-1">Chief Technology Officer</p>
+            <p class="small text-muted">Expert in Cybersecurity Architecture & Data Privacy.</p>
+            </div>
+    </div>
+</div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="card h-100 text-center shadow-sm p-3">
+                        <img src="img/testimonial-img-04.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Team Member 3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Michael Brown</h5>
+                            <p class="text-muted mb-1">Head of Solutions</p>
+                            <p class="small text-muted">Specializing in Custom Software Development & AI Integration.</p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="text-primary mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href="#" class="text-primary mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+      </div>
+</section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
+                    <h5 class="text-uppercase mb-4 text-primary">IT Consulting Service</h5>
+                    <p class="text-white-50 small">
+                        Empowering businesses with cutting-edge IT solutions for innovation, security, and growth.
+                    </p>
+                    <p class="text-white-50 small">
+                        &copy; 2024 IT Consulting Service. All Rights Reserved.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="text-uppercase mb-4 text-primary">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#infinite" class="text-white-50 text-decoration-none"><i class="fas fa-home mr-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="index.html#whatwedo" class="text-white-50 text-decoration-none"><i class="fas fa-handshake mr-2"></i>Services</a></li>
+                        <li class="mb-2"><a href="index.html#testimonials" class="text-white-50 text-decoration-none"><i class="fas fa-comment-alt mr-2"></i>Testimonials</a></li>
+                        <li class="mb-2"><a href="index.html#gallery" class="text-white-50 text-decoration-none"><i class="fas fa-images mr-2"></i>Gallery</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none"><i class="fas fa-envelope mr-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <h5 class="text-uppercase mb-4 text-primary">Our Expertise</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="cloud-transformation.html" class="text-white-50 text-decoration-none"><i class="fas fa-cloud mr-2"></i>Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="cybersecurity-solutions.html" class="text-white-50 text-decoration-none"><i class="fas fa-shield-alt mr-2"></i>Cybersecurity</a></li>
+                        <li class="mb-2"><a href="it-roadmap-development.html" class="text-white-50 text-decoration-none"><i class="fas fa-chart-line mr-2"></i>IT Strategy</a></li>
+                        <li class="mb-2"><a href="managed-it-services.html" class="text-white-50 text-decoration-none"><i class="fas fa-hands-helping mr-2"></i>Managed Services</a></li>
+                        <li class="mb-2"><a href="data-analytics.html" class="text-white-50 text-decoration-none"><i class="fas fa-database mr-2"></i>Data Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-left" data-aos-delay="400">
+                    <h5 class="text-uppercase mb-4 text-primary">Get In Touch</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Your Business Location, Tiruppur</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt mr-2"></i> +91 (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope mr-2"></i> info@youritconsulting.com</li>
+                    </ul>
+                    <h5 class="text-uppercase mb-3 mt-4 text-primary">Follow Us</h5>
+                    <div class="social-links d-flex">
+                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center text-white-50 small">
+                    Designed with <i class="fas fa-heart text-danger"></i> by
+                    <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates" target="_blank" class="text-white-50">TOOPLATE</a>
+                    &amp; Developed by [Your Company Name/Your Name]
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+ AOS.init({
+        duration: -1000, // Controls the duration of the animation (in milliseconds). Default is 400.
+                         // Higher values make the animation slower and smoother.
+        easing: 'ease-out-quad', // Defines the easing curve for the animation.
+                                 // Common options include:
+                                 // 'ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out',
+                                 // 'ease-in-back', 'ease-out-back', 'ease-in-out-back',
+                                 // 'ease-in-sine', 'ease-out-sine', 'ease-in-out-sine',
+                                 // 'ease-in-quad', 'ease-out-quad', 'ease-in-out-quad', (Good for smooth fades)
+                                 // 'ease-in-cubic', 'ease-out-cubic', 'ease-in-out-cubic',
+                                 // 'ease-in-quart', 'ease-out-quart', 'ease-in-out-quart'
+        once: true, // Whether animation should happen only once - while scrolling down.
+                     // Set to 'false' if you want animations to repeat every time element comes into view.
+                     // Set to 'true' if you want it to animate only the first time.
+        // offset: 120, // offset (in px) from the original trigger point
+                         // default: 120 (means animation starts when element is 120px from bottom of viewport)
+        // delay: 0,    // values from 0 to 3000, with step 50ms (global delay for all animations)
+      });
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        }
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);
+        background_image_parallax_2($("#testimonials"), 0.80);
+
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+
+        // Close mobile menu after click
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show');
+        })
+
+        // // Scroll to corresponding section with animation
+        // $('#tmNav').singlePageNav({
+        //   'easing': 'easeInOutExpo',
+        //   'speed': 600
+        // });
+
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>

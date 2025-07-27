@@ -1,0 +1,365 @@
+/* Custom Styles for Hexagon Icons and Animations */
+
+/* --- Overall Section Background Color --- */
+#whatwedo {
+    background-color: #F8FBFD; /* A very light, subtle blue-grey background for the entire section */
+}
+
+/* Base Hexagon Wrapper Styles */
+.icon-hexagon-wrapper {
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft initial shadow */
+    transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 0 auto 30px auto; /* Centered horizontally, 30px space below for stacking */
+}
+
+/* Icon Styles within Hexagon */
+.icon-hexagon-wrapper i {
+    font-size: 6rem; /* Adjust icon size */
+    line-height: 1; /* Helps vertical alignment */
+    transition: color 0.4s ease-in-out; /* Smooth icon color change */
+}
+
+/* --- Milky Color Definitions & Hover Effects --- */
+
+/* Color Set 1: Light Blue */
+.hexagon-color-1 { background-color: #E1F5FE; } /* Milky Blue */
+.hexagon-color-1 i { color: #2196F3; } /* Primary Blue for icon */
+.hexagon-color-1:hover { background-color: #90CAF9; } /* Brighter Blue on hover */
+.hexagon-color-1:hover i { color: #1976D2; } /* Darker Blue icon on hover */
+
+/* Color Set 2: Light Green */
+.hexagon-color-2 { background-color: #E8F5E9; } /* Milky Green */
+.hexagon-color-2 i { color: #4CAF50; } /* Primary Green for icon */
+.hexagon-color-2:hover { background-color: #A5D6A7; } /* Brighter Green on hover */
+.hexagon-color-2:hover i { color: #388E3C; } /* Darker Green icon on hover */
+
+/* Color Set 3: Light Orange/Peach */
+.hexagon-color-3 { background-color: #FFF3E0; } /* Milky Orange */
+.hexagon-color-3 i { color: #FF9800; } /* Primary Orange for icon */
+.hexagon-color-3:hover { background-color: #FFCC80; } /* Brighter Orange on hover */
+.hexagon-color-3:hover i { color: #FB8C00; } /* Darker Orange icon on hover */
+
+/* Color Set 4: Light Purple */
+.hexagon-color-4 { background-color: #F3E5F5; } /* Milky Purple */
+.hexagon-color-4 i { color: #9C27B0; } /* Primary Purple for icon */
+.hexagon-color-4:hover { background-color: #CE93D8; } /* Brighter Purple on hover */
+.hexagon-color-4:hover i { color: #7B1FA2; } /* Darker Purple icon on hover */
+
+/* Color Set 5: Light Teal */
+.hexagon-color-5 { background-color: #E0F2F7; } /* Milky Teal */
+.hexagon-color-5 i { color: #00BCD4; } /* Primary Teal for icon */
+.hexagon-color-5:hover { background-color: #80DEEA; } /* Brighter Teal on hover */
+.hexagon-color-5:hover i { color: #0097A7; } /* Darker Teal icon on hover */
+
+/* Color Set 6: Light Red/Pinkish */
+.hexagon-color-6 { background-color: #F8E4E5; } /* Milky Red/Pink */
+.hexagon-color-6 i { color: #E53935; } /* Primary Red for icon */
+.hexagon-color-6:hover { background-color: #EF9A9A; } /* Brighter Red on hover */
+.hexagon-color-6:hover i { color: #C62828; } /* Darker Red icon on hover */
+
+/* --- Animation for MEDIUM Zoom In/Out (Zoom animation changed) --- */
+@keyframes zoom-pulse-medium {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05); /* Medium zoom in */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.animated-glowing-pulse { /* Renaming this class would be ideal for clarity, but keeping it to avoid HTML changes */
+    animation: zoom-pulse-medium 2s infinite alternate ease-in-out; /* Apply new animation, faster speed */
+}
+
+/* Enhanced Hover effect for extra interaction (overrides animation momentarily) */
+.icon-hexagon-wrapper:hover {
+    transform: scale(1.1); /* Slightly more zoom on direct hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    animation: none; /* Stop the continuous pulse while hovering */
+}
+
+/* --- Separator between Service Blocks --- */
+.service-block-separator {
+    border-bottom: 1px dashed #DCDCDC; /* Light grey dashed line */
+    margin-top: 40px; /* Space above separator */
+    margin-bottom: 40px; /* Space below separator */
+    width: 80%; /* Width of the separator line */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the entire service block row */
+.service-block-unique {
+    background-color: #FDFDFD; /* A very light, almost white background */
+    border: 1px solid #e0e0e0; /* A subtle light border */
+    border-radius: 10px; /* Slightly rounded corners for the block */
+    padding: 30px; /* Padding inside the block */
+    margin-bottom: 50px !important; /* Increase bottom margin for more space between blocks */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the entire service block */
+.service-block-unique:hover {
+    background-color: #F8F8F8; /* Slightly darker on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+/* Text Decorations for uniqueness */
+.service-block-unique .custom-text-decoration {
+    font-weight: 700; /* Make the heading bolder */
+    letter-spacing: 0.5px; /* Add slight letter spacing */
+    color: #333; /* Ensure strong color for heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle text shadow */
+}
+
+.service-block-unique .custom-paragraph-style {
+    font-size: 1.05rem; /* Slightly larger paragraph text */
+    line-height: 1.7; /* Improve readability with more line height */
+    color: #555; /* Darker gray for better contrast */
+}
+
+/* Ensure the button within this block maintains its style or adjust if needed */
+.service-block-unique .btn {
+    margin-top: 15px; /* Add some space above the button */
+}
+
+
+/* Media query for smaller screens to adjust icon size and spacing */
+@media (max-width: 768px) {
+    .icon-hexagon-wrapper {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 25px; /* Adjust mobile vertical spacing */
+    }
+    .icon-hexagon-wrapper i {
+        font-size: 4rem;
+    }
+    .service-block-unique {
+        padding: 20px; /* Reduce padding on smaller screens */
+        margin-bottom: 30px !important; /* Adjust bottom margin */
+    }
+    .service-block-separator {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+}
+
+/* --- Testimonial Section Layout (Updated for specific alignment) --- */
+
+/* Ensures the entire carousel container is centered */
+.tm-gallery-container-2 {
+    max-width: 900px; /* Adjust max-width as needed for content flow */
+    margin: 0 auto; /* Center the carousel container */
+}
+
+/* Make each testimonial item a block for stacking, but limit its width and center it */
+.tm-testimonials-carousel .tm-testimonial-item {
+    display: block; /* Stack image, quote, and name vertically */
+    text-align: center; /* Default for image to be centered */
+    padding: 25px; /* Add internal padding to the testimonial block */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for the testimonial card */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 0 auto 30px auto; /* Center the whole testimonial block and add space below */
+    width: 90%; /* Occupy 90% width of the carousel slide */
+    max-width: 600px; /* Limit the max width of the testimonial item for better text flow */
+}
+
+/* Style for the testimonial image - Centered */
+.tm-testimonial-item img {
+    width: 120px; /* Original size */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure it's perfectly round */
+    display: block; /* Important for margin: auto to work */
+    margin: 0 auto 15px auto; /* Center the image horizontally, add space below */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow to image */
+}
+
+/* Styles for the blockquote (Testimonial Quote) - Left Aligned */
+.tm-testimonial-item blockquote {
+    margin: 0 auto 10px auto; /* Center blockquote itself as a block element */
+    text-align: left; /* **Crucial: Align the text inside to the left** */
+    font-size: 1.1rem; /* Slightly larger quote font size */
+    line-height: 1.6; /* Improved readability */
+    color: #f0f0f0; /* Lighter color for quote text */
+    max-width: 90%; /* Limit width to allow centering if needed */
+}
+
+/* Styles for the figcaption (Author Name) - Right Aligned */
+.tm-testimonial-item figcaption {
+    text-align: right; /* **Crucial: Align the author name to the right** */
+    font-size: 0.95rem; /* Adjust font size */
+    color: #e0e0e0; /* Lighter color for name */
+    margin-top: 10px; /* Space above author name */
+}
+
+.tm-testimonial-item figcaption span {
+    color: #ccc; /* Ensure the muted text (title) is visible */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .tm-testimonials-carousel .tm-testimonial-item {
+        padding: 20px;
+        max-width: 90%; /* Allow wider block on small screens */
+    }
+    .tm-testimonial-item img {
+        margin-bottom: 10px; /* Adjust spacing on mobile */
+    }
+    .tm-testimonial-item blockquote {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+    .tm-testimonial-item figcaption {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+}
+/* --- Contact Section Card Styling --- */
+
+/* Overall container for the cards */
+#contact .col-lg-10.mx-auto .row {
+    justify-content: center; /* Center cards if there aren't enough to fill a row */
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 15px; /* More rounded corners for a card look */
+    padding: 30px 20px; /* Internal padding */
+    min-height: 220px; /* Ensure cards have a consistent height */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+    display: flex; /* Make it a flex container to center content */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Very light border */
+}
+
+.contact-card:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+    transform: translateY(-7px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+.contact-card .item-link {
+    text-decoration: none; /* Remove default underline from links */
+    color: inherit; /* Inherit color from parent for initial state */
+    display: flex; /* Make link also a flex container */
+    flex-direction: column; /* Stack contents inside link */
+    align-items: center; /* Center items inside link */
+    width: 100%; /* Ensure link takes full width of card */
+}
+
+.contact-card .item-link:hover {
+    text-decoration: none; /* Keep no underline on hover */
+    color: #fff; /* Ensure text remains white on hover */
+}
+
+.contact-card .item-link i {
+    color: #00bcd4; /* Accent color for icons */
+    font-size: 3.5rem; /* Large icon size */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-card:hover .item-link i {
+    color: #2196F3; /* Change icon color on card hover */
+    transform: scale(1.1); /* Slight zoom on icon */
+}
+
+.contact-card .card-title {
+    font-size: 1.4rem; /* Larger title for emphasis */
+    font-weight: 600;
+    margin-top: 15px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.contact-card .card-text {
+    font-size: 1rem; /* Standard text size for details */
+    color: #eee; /* Lighter color for details */
+    text-align: center;
+}
+
+/* Ensure original button styling remains or is added if it disappeared */
+.animated-button {
+    /* (Keep the animated-button CSS provided in the previous response here) */
+    position: relative;
+    overflow: hidden;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* Ensure text is above pseudo-element */
+    min-width: 250px; /* Give it a consistent minimum width */
+}
+
+.animated-button i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.animated-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animated-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay for animation */
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.animated-button:hover::after {
+    left: 0; /* Slide in from left on hover */
+}
+
+.animated-button:hover i {
+    transform: translateX(5px); /* Arrow moves slightly right on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767.98px) {
+    .contact-card {
+        padding: 25px 15px;
+        min-height: 200px;
+    }
+    .contact-card .item-link i {
+        font-size: 3rem; /* Smaller icons on mobile */
+    }
+    .contact-card .card-title {
+        font-size: 1.2rem;
+    }
+    .contact-card .card-text {
+        font-size: 0.9rem;
+    }
+    .animated-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: unset;
+        width: 100%;
+    }
+}

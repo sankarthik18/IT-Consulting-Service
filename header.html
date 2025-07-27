@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hover Grid Gallery with Arrows & Dots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .gallery-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+      border-radius: 8px;
+    }
+
+    /* Hover effect */
+    .grid-item:hover img {
+      transform: scale(1.1);
+      filter: brightness(80%);
+    }
+
+    /* Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: #666;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      user-select: none;
+    }
+    .arrow:hover {
+      background: #ddd;
+    }
+    .arrow-left {
+      left: 10px;
+    }
+    .arrow-right {
+      right: 10px;
+    }
+
+    /* Dots */
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: 0 8px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .dot.active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hover Grid Gallery</h1>
+
+  <div class="gallery-container" style="position: relative;">
+    <div class="arrow arrow-left">&#10094;</div>
+    <div class="arrow arrow-right">&#10095;</div>
+
+    <div class="grid" id="galleryGrid">
+      <!-- Images will be injected here by JS -->
+    </div>
+
+    <div class="dots" id="dotsContainer"></div>
+  </div>
+
+<script>
+  // Your local image paths
+  const images = [
+    "img/gallery-img-01.jpg",
+    "img/gallery-img-02.jpg",
+    "img/gallery-img-03.jpg",
+    "img/gallery-img-04.jpg",
+    "img/gallery-img-05.jpg",
+    "img/gallery-img-06.jpg",
+    "img/gallery-img-07.jpg",
+    "img/gallery-img-08.jpg",
+    "img/gallery-img-09.jpg",
+    "img/gallery-img-10.jpg",
+    "img/gallery-img-11.jpg",
+    "img/gallery-img-12.jpg"
+  ];
+
+  const galleryGrid = document.getElementById('galleryGrid');
+  const dotsContainer = document.getElementById('dotsContainer');
+  const leftArrow = document.querySelector('.arrow-left');
+  const rightArrow = document.querySelector('.arrow-right');
+
+  let currentPage = 0;
+  let itemsPerPage = 5;
+
+  function updateItemsPerPage() {
+    const width = window.innerWidth;
+    if (width <= 600) itemsPerPage = 2;
+    else if (width <= 900) itemsPerPage = 3;
+    else itemsPerPage = 5;
+  }
+
+  function renderGrid() {
+    galleryGrid.innerHTML = '';
+    const start = currentPage * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pageImages = images.slice(start, end);
+
+    pageImages.forEach(src => {
+      const div = document.createElement('div');
+      div.classList.add('grid-item');
+      div.innerHTML = `<img src="${src}" alt="Gallery Image" />`;
+      galleryGrid.appendChild(div);
+    });
+  }
+
+  function renderDots() {
+    dotsContainer.innerHTML = '';
+    const pageCount = Math.ceil(images.length / itemsPerPage);
+
+    for (let i = 0; i < pageCount; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === currentPage) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        currentPage = i;
+        updateGallery();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateGallery() {
+    renderGrid();
+    renderDots();
+  }
+
+  leftArrow.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateGallery();
+    }
+  });
+
+  rightArrow.addEventListener('click', () => {
+    if (currentPage < Math.ceil(images.length / itemsPerPage) - 1) {
+      currentPage++;
+      updateGallery();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    const oldItemsPerPage = itemsPerPage;
+    updateItemsPerPage();
+    if (oldItemsPerPage !== itemsPerPage) {
+      currentPage = 0;
+      updateGallery();
+    }
+  });
+
+  updateItemsPerPage();
+  updateGallery();
+</script>
+
+</body>
+</html>
