@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>IT Consulting Services - Career</title>
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <style>
+        /* Global Responsive Fixes from index.html style block */
+        body,
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Specific styles for the Career page */
+        #career-hero {
+            background-image: url('img/career-hero-bg.jpg');
+            /* Replace with a suitable career-themed image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tm-career-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            /* Light background for content sections */
+        }
+
+        .tm-career-section.bg-white {
+            background-color: #fff;
+        }
+
+        .job-opening {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-opening:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .job-opening h3 {
+            color: #007bff;
+            /* Primary blue color for job titles */
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .job-opening .meta-info {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .job-opening .meta-info i {
+            margin-right: 5px;
+        }
+
+        .apply-btn {
+            background-color: #28a745;
+            /* Green for apply button */
+            border-color: #28a745;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+
+        .why-us-item {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .why-us-item i {
+            font-size: 3em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .why-us-item h4 {
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+        <nav class="navbar navbar-expand-md tm-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">IT Consulting Services</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle tm-nav-link" href="#" id="servicesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="services.html">Cloud Transformation</a>
+                                <a class="dropdown-item" href="services.html">Cybersecurity</a>
+                                <a class="dropdown-item" href="services.html">IT Roadmap</a>
+                                <a class="dropdown-item" href="services.html">Software Development</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item font-weight-bold" href="services.html">All Services</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link active" href="career.html">Career <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="career-hero"
+            class="text-center tm-hero-text-container d-flex align-items-center justify-content-center">
+            <div class="tm-hero-text-container-inner m-4" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="tm-hero-title display-4 mb-4 text-white">Join Our Team</h1>
+                <p class="tm-hero-subtitle lead mb-5 text-white-50">
+                    Shape the Future of IT with Us. Discover Your Next Career Opportunity.
+                </p>
+                <a href="#open-positions" class="btn btn-primary btn-lg mt-3">View Open Positions</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-work-with-us" class="tm-career-section bg-white">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-12" data-aos="fade-up">
+                    <h2 class="tm-section-title text-center text-primary">Why Work With IT Consulting Service?</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                        We believe in fostering a dynamic and innovative environment where talent thrives. Join a team
+                        dedicated to excellence and making a real impact.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-us-item ml-2 mr-2">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovation & Growth</h4>
+                        <p class="text-muted">Work on cutting-edge projects and continuously expand your skills in a
+                            forward-thinking environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-us-item ml-2 mr-2">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaborative Culture</h4>
+                        <p class="text-muted">Be part of a supportive team that values collaboration, mutual respect,
+                            and shared success.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-us-item ml-2 mr-2">
+                        <i class="fas fa-medal"></i>
+                        <h4>Impactful Work</h4>
+                        <p class="text-muted">Contribute to solutions that empower businesses and drive significant
+                            positive change for our clients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-us-item ml-2 mr-2">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Employee Well-being</h4>
+                        <p class="text-muted">We prioritize work-life balance and offer comprehensive benefits to
+                            support our team members.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="why-us-item ml-2 mr-2">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Career Advancement</h4>
+                        <p class="text-muted">Opportunities for professional development, training, and clear pathways
+                            for career progression.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="why-us-item ml-2 mr-2">
+                        <i class="fas fa-location-arrow"></i>
+                        <h4>Modern Workplace</h4>
+                        <p class="text-muted">Work in a state-of-the-art environment with the latest tools and
+                            technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="open-positions" class="tm-career-section">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-12" data-aos="fade-up">
+                    <h2 class="tm-section-title text-center text-primary">Current Open Positions</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                        Explore our exciting opportunities and take the next step in your IT career.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="job-opening m-2">
+                        <h3>Senior Cloud Architect</h3>
+                        <div class="meta-info">
+                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Tiruppur, India</span>
+                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
+                            <span><i class="fas fa-calendar-alt"></i> Posted: July 20, 2025</span>
+                        </div>
+                        <p class="text-muted">
+                            We are seeking a highly experienced Senior Cloud Architect to design and implement scalable
+                            cloud solutions for our enterprise clients.
+                        </p>
+                        <p class="text-muted small">
+                            **Responsibilities:** Lead cloud strategy, architectural design, solution implementation,
+                            and team mentorship.
+                            <br>
+                            **Requirements:** 8+ years experience in cloud architecture (Azure/AWS/GCP), strong
+                            knowledge of cloud security, DevOps, and microservices.
+                        </p>
+                        <a href="apply.html?position=SeniorCloudArchitect" class="btn apply-btn">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="job-opening m-2">
+                        <h3>Cybersecurity Analyst</h3>
+                        <div class="meta-info">
+                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
+                            <span><i class="fas fa-calendar-alt"></i> Posted: July 15, 2025</span>
+                        </div>
+                        <p class="text-muted">
+                            Join our cybersecurity team to monitor, detect, and respond to security incidents, ensuring
+                            the protection of client data and systems.
+                        </p>
+                        <p class="text-muted small">
+                            **Responsibilities:** Security monitoring, incident response, vulnerability assessment,
+                            security policy enforcement.
+                            <br>
+                            **Requirements:** 3+ years in cybersecurity, SIEM tools, network security, and security
+                            certifications (e.g., CompTIA Security+, CEH).
+                        </p>
+                        <a href="apply.html?position=CybersecurityAnalyst" class="btn apply-btn">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="job-opening m-2">
+                        <h3>Full Stack Developer (Mid-level)</h3>
+                        <div class="meta-info">
+                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Tiruppur, India</span>
+                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
+                            <span><i class="fas fa-calendar-alt"></i> Posted: July 10, 2025</span>
+                        </div>
+                        <p class="text-muted">
+                            We are looking for a versatile Full Stack Developer to build and maintain web applications
+                            for various client projects.
+                        </p>
+                        <p class="text-muted small">
+                            **Responsibilities:** Develop both front-end and back-end components, API integration,
+                            database management, testing.
+                            <br>
+                            **Requirements:** 4+ years in web development, proficiency in React/Angular/Vue,
+                            Node.js/Python/Java, and database knowledge (SQL/NoSQL).
+                        </p>
+                        <a href="apply.html?position=FullStackDeveloper" class="btn apply-btn">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="job-opening m-2">
+                        <h3>IT Support Specialist</h3>
+                        <div class="meta-info">
+                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Tiruppur, India</span>
+                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
+                            <span><i class="fas fa-calendar-alt"></i> Posted: July 01, 2025</span>
+                        </div>
+                        <p class="text-muted">
+                            Provide essential technical support to our internal team and clients, ensuring smooth IT
+                            operations and user satisfaction.
+                        </p>
+                        <p class="text-muted small">
+                            **Responsibilities:** Troubleshoot hardware/software issues, user support, system
+                            maintenance, documentation.
+                            <br>
+                            **Requirements:** 2+ years in IT support, strong problem-solving skills, knowledge of
+                            Windows/macOS/Linux, and networking basics.
+                        </p>
+                        <a href="apply.html?position=ITSupportSpecialist" class="btn apply-btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+                <p class="lead text-muted">Didn't find what you're looking for?</p>
+                <a href="contact.html" class="btn btn-outline-primary btn-lg">Submit Your Resume for Future
+                    Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">IT Consulting Service</h5>
+                    <p class="text-white-50 small">
+                        Empowering businesses with cutting-edge IT solutions for innovation, security, and growth.
+                    </p>
+                    <p class="text-white-50 small">
+                        &copy; 2024 IT Consulting Service. All Rights Reserved.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#infinite" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-home mr-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="index.html#whatwedo" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-handshake mr-2"></i>Services</a></li>
+                        <li class="mb-2"><a href="index.html#testimonials" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-comment-alt mr-2"></i>Testimonials</a></li>
+                        <li class="mb-2"><a href="index.html#gallery" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-images mr-2"></i>Gallery</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-envelope mr-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Our Expertise</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html#cloud" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-cloud mr-2"></i>Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="services.html#cybersecurity"
+                                class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-shield-alt mr-2"></i>Cybersecurity</a></li>
+                        <li class="mb-2"><a href="services.html#it-strategy"
+                                class="text-white-50 text-decoration-none"><i class="fas fa-chart-line mr-2"></i>IT
+                                Strategy</a></li>
+                        <li class="mb-2"><a href="services.html#managed-services"
+                                class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-hands-helping mr-2"></i>Managed Services</a></li>
+                        <li class="mb-2"><a href="services.html#data-analytics"
+                                class="text-white-50 text-decoration-none"><i class="fas fa-database mr-2"></i>Data
+                                Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Get In Touch</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Your Business Location, Tiruppur
+                        </li>
+                        <li class="mb-2"><i class="fas fa-phone-alt mr-2"></i> +91 (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope mr-2"></i> info@youritconsulting.com</li>
+                    </ul>
+                    <h5 class="text-uppercase mb-3 mt-4 text-primary">Follow Us</h5>
+                    <div class="social-links d-flex">
+                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
+                                class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
+                                class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
+                                class="fab fa-linkedin-in fa-2x"></i></a>
+                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50"><i
+                                class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center text-white-50 small">
+                    Designed with <i class="fas fa-heart text-danger"></i> by
+                    <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates" target="_blank"
+                        class="text-white-50">TOOPLATE</a>
+                    &amp; Developed by [Your Company Name/Your Name]
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Use a positive number
+            easing: 'ease-out-quad',
+            once: true
+        });
+
+        $('.dropdown-toggle').on('click', function (e) {
+            e.preventDefault();
+            $(this).next('.dropdown-menu').slideToggle();
+        });
+
+        // Parallax functions (keep if needed, otherwise consider moving to index.html specific script)
+        function getOffSet() {
+            var _offset = 450;
+            var windowHeight = window.innerHeight;
+            if (windowHeight > 500) { _offset = 400; }
+            if (windowHeight > 680) { _offset = 300; }
+            if (windowHeight > 830) { _offset = 210; }
+            return _offset;
+        }
+
+        function setParallaxPosition($doc, multiplier, $object) {
+            var offset = getOffSet();
+            var from_top = $doc.scrollTop(),
+                bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
+            $object.css({ 'background-position': bg_css });
+        }
+
+        var background_image_parallax = function ($object, multiplier, forceSet) {
+            multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+            multiplier = 1 - multiplier;
+            var $doc = $(document);
+            if (forceSet) {
+                setParallaxPosition($doc, multiplier, $object);
+            } else {
+                $(window).scroll(function () {
+                    setParallaxPosition($doc, multiplier, $object);
+                });
+            }
+        };
+
+        var background_image_parallax_2 = function ($object, multiplier) {
+            multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+            multiplier = 1 - multiplier;
+            var $doc = $(document);
+            $object.css({ 'background-attachment': 'fixed' });
+
+            $(window).scroll(function () {
+                if ($(window).width() > 768) {
+                    var firstTop = $object.offset().top,
+                        pos = $(window).scrollTop(),
+                        yPos = Math.round(multiplier * (firstTop - pos) - 186);
+
+                    var bg_css = 'center ' + yPos + 'px';
+                    $object.css({ 'background-position': bg_css });
+                } else {
+                    $object.css({ 'background-position': 'center' });
+                }
+            });
+        };
+
+        $(function () {
+            // Hero Section - Background Parallax (if applicable to career hero)
+            // background_image_parallax($('#career-hero'), 0.3, false); 
+
+            // Remove these if #contact and #testimonials are only on index.html
+            // background_image_parallax_2($('#contact'), 0.8);
+            // background_image_parallax_2($('#testimonials'), 0.8); // Changed #why-work-with-us testimonials to #why-work-with-us if used for parallax
+
+            window.addEventListener(
+                'resize',
+                function () {
+                    // background_image_parallax($('#career-hero'), 0.3, true); 
+                },
+                true
+            );
+
+            // --- CORRECTED NAVBAR SCROLL BEHAVIOR FOR CAREER.HTML ---
+            // This will make the navbar white after scrolling more than 120px
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 120) { // You can adjust this '120' pixel value
+                    $('.tm-navbar').addClass('scroll');
+                } else {
+                    $('.tm-navbar').removeClass('scroll');
+                }
+            });
+            // --- END CORRECTED NAVBAR SCROLL BEHAVIOR ---
+
+
+            $('#tmNav a').on('click', function () {
+                $('.navbar-collapse').removeClass('show');
+            });
+
+            $('a').on('click', function (event) {
+                if (this.hash !== '') {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate(
+                        {
+                            scrollTop: $(hash).offset().top,
+                        },
+                        600,
+                        'easeInOutExpo',
+                        function () {
+                            window.location.hash = hash;
+                        }
+                    );
+                }
+            });
+
+            // Slick Carousel and Magnific Popup (keep as is)
+            // Note: tm-gallery appears twice as a class in your original code, once for magnificPopup and once for slick.
+            // If tm-gallery is meant for a gallery, keep it. If it's a general class, ensure its usage is consistent.
+            // Based on the code, you have two slick carousels/galleries.
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: { enabled: true },
+            });
+
+            $('.tm-testimonials-carousel').slick({
+                dots: true,
+                prevArrow: false,
+                nextArrow: false,
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    { breakpoint: 992, settings: { slidesToShow: 2 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                    { breakpoint: 480, settings: { slidesToShow: 1 } },
+                ],
+            });
+
+            // This seems to be for another gallery/carousel, distinct from the testimonials one.
+            // If .tm-gallery is used for both a lightbox and a carousel, you might need to give
+            // the carousel a more specific class to avoid conflicts.
+            // Assuming this is intended for a separate image gallery carousel.
+            $('.tm-gallery').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 5,
+                slidesToScroll: 2,
+                responsive: [
+                    { breakpoint: 1199, settings: { slidesToShow: 4, slidesToScroll: 2 } },
+                    { breakpoint: 991, settings: { slidesToShow: 3, slidesToScroll: 2 } },
+                    { breakpoint: 767, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                    { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                ],
+            });
+        });
+    </script>
+</body>
+
+</html>

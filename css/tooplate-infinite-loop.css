@@ -1,0 +1,1178 @@
+/*
+
+Tooplate 2117 Infinite Loop
+
+https://www.tooplate.com/view/2117-infinite-loop
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  color: #707070;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+a {
+  transition: all 0.3s ease;
+  color: #38b;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #d40;
+}
+
+a:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 8px 32px;
+}
+
+.btn:hover {
+  background-color: #ced4da;
+}
+
+blockquote {
+  font-size: 0.86em;
+  line-height: 1.8em;
+}
+
+.tm-section-pad-top {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.tm-content-box {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.tm-text-primary {
+  color: #37a;
+}
+
+.tm-font-big {
+  font-size: 1.25rem;
+}
+
+.tm-btn-primary {
+  color: white;
+  background-color: #369;
+  padding: 14px 30px;
+}
+
+.tm-btn-primary:hover,
+.tm-btn-primary:focus {
+  color: white;
+  background-color: #38b;
+}
+
+/* Navbar */
+
+.tm-navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.tm-navbar.scroll {
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navbar-brand:hover,
+.tm-navbar.scroll .navbar-brand:hover {
+  color: #38b;
+}
+
+.tm-navbar.scroll .navbar-brand {
+  color: #369;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.tm-nav-link {
+  color: white;
+}
+
+.tm-navbar.scroll .tm-nav-link {
+  color: #369;
+}
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    margin-left: 0 !important;
+    text-align: left;
+  }
+
+  .navbar-nav .nav-item {
+    text-align: left;
+  }
+}
+/* === MOBILE NAVBAR TEXT COLOR FIX === */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    background-color: white;
+  }
+
+  .tm-nav-link,
+  .dropdown-menu a,
+  .dropdown-toggle {
+    color: #333 !important;
+  }
+
+  .dropdown-menu {
+    background-color: rgb(177, 171, 171);
+    border: none;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #369;
+    color: #000;
+  }
+
+  .navbar-toggler .tm-nav-link {
+    border-color: #333;
+  }
+
+  .navbar-toggler-icon {
+    color: #333;
+  }
+}
+
+.tm-navbar.scroll .tm-nav-link:hover,
+.tm-navbar.scroll .tm-nav-link.current,
+.tm-nav-link:hover {
+  color: #fff;
+  background-color: #369;
+}
+/* Ensure text is white on hover and when dropdown is expanded */
+.tm-navbar.scroll .dropdown-toggle.tm-nav-link:hover,
+.tm-navbar.scroll .dropdown-toggle.tm-nav-link:focus,
+.tm-navbar.scroll .dropdown-toggle.tm-nav-link[aria-expanded="true"] {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-toggler-icon {
+  color: white;
+  padding-top: 6px;
+}
+
+.tm-navbar.scroll .navbar-toggler {
+  border: 1px solid #707070;
+}
+
+.tm-navbar.scroll .navbar-toggler-icon {
+  color: #707070;
+}
+.tm-navbar.scroll .dropdown-toggle.tm-nav-link {
+  color: #369;
+}
+
+/* Fix when dropdown is clicked (expanded) */
+.tm-navbar.scroll .dropdown-toggle.tm-nav-link[aria-expanded="true"] {
+  color: #fff;
+  background-color: #369;
+}
+/* Hero */
+
+#infinite {
+  background-color: #222;
+  background-image: url(../img/infinite-loop-01.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 375px;
+  position: relative;
+}
+
+@media (min-height: 600px) and (min-width: 1920px) {
+  #infinite {
+    background-size: cover;
+  }
+}
+
+@media (min-height: 830px) {
+  #infinite {
+    background-position: center -210px;
+  }
+}
+
+@media (min-height: 680px) and (max-height: 829px) {
+  #infinite {
+    background-position: center -300px;
+  }
+}
+
+@media (min-height: 500px) and (max-height: 679px) {
+  #infinite {
+    background-position: center -400px;
+  }
+}
+
+@media (max-height: 499px) {
+  #infinite {
+    background-position: center -450px;
+  }
+}
+
+.tm-hero-text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.tm-hero-text-container-inner {
+  margin-top: -90px;
+}
+
+.tm-hero-title {
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 2px #333;
+}
+
+.tm-hero-subtitle {
+  text-shadow: 2px 2px 2px #333;
+}
+
+.tm-intro-next {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+}
+
+@media (max-height: 480px) {
+  .tm-hero-text-container-inner {
+    margin-top: -40px;
+  }
+
+  .tm-intro-next {
+    bottom: 20px;
+  }
+}
+
+.tm-down-arrow-link {
+  display: block;
+  margin-top: 18%;
+}
+
+.tm-down-arrow {
+  color: #fff;
+  cursor: pointer;
+  background: #357;
+  padding: 15px 40px;
+  transition: all 0.3s ease;
+}
+
+.tm-down-arrow:hover,
+.tm-down-arrow:focus {
+  color: #fff;
+  background: #37a;
+  padding: 20px 50px;
+}
+
+/* Introduction */
+
+#introduction {
+  padding-bottom: 100px;
+}
+
+.tm-section-title {
+  font-size: 2.6rem;
+  font-weight: normal;
+}
+
+.tm-intro-text {
+  font-size: 1.2rem;
+}
+
+.tm-icon {
+  display: block;
+  color: #37a;
+}
+
+.tm-continue {
+  padding: 20px 0 30px 0;
+}
+
+/* Testimonials */
+#testimonials {
+  color: white;
+  background-image: url(../img/infinite-loop-02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  #testimonials {
+    background-image: url(../img/infinite-loop-02-mobile.jpg);
+  }
+}
+
+.tm-testimonials-content {
+  position: relative;
+  z-index: 100;
+}
+
+.tm-bg-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 70, 80, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.tm-testimonials-carousel {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.tm-testimonial-item {
+  max-width: 290px;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.tm-testimonial-item img {
+  border-radius: 50%;
+  margin-bottom: 35px;
+}
+
+.tm-testimonial-item figcaption {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Work */
+
+.tm-section-desc {
+  max-width: 650px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.tm-gallery-container {
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
+.tm-gallery-item {
+  margin: 0 15px;
+}
+
+.slick-dots {
+  bottom: -65px;
+}
+
+.slick-dots li {
+  margin: 0 13px;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before,
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #3ba0dd;
+}
+
+.tm-testimonials-carousel .slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+}
+
+.tm-testimonials-carousel .slick-dots li button:hover:before,
+.tm-testimonials-carousel .slick-dots li button:focus:before,
+.tm-testimonials-carousel .slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  font-size: 18px;
+}
+
+/* Hover Effect */
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 600;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/*---------------*/
+/***** Honey *****/
+/*---------------*/
+
+figure.effect-honey {
+  background: #4a3753;
+  max-width: 220px;
+}
+
+figure.effect-honey img {
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect-honey:hover img {
+  opacity: 0.4;
+}
+
+figure.effect-honey figcaption::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #38c;
+  content: "";
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+figure.effect-honey h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1em 1.5em;
+  width: 100%;
+  text-align: left;
+  -webkit-transform: translate3d(0, -30px, 0);
+  transform: translate3d(0, -30px, 0);
+}
+
+figure.effect-honey h2 i {
+  font-style: normal;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, -30px, 0);
+  transform: translate3d(0, -30px, 0);
+}
+
+figure.effect-honey figcaption::before,
+figure.effect-honey h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-honey:hover figcaption::before,
+figure.effect-honey:hover h2,
+figure.effect-honey:hover h2 i {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.tm-container-gallery {
+  padding-top: 30px;
+}
+
+/* Contact */
+
+#contact {
+  color: white;
+  background-color: #001828;
+  background-image: url(../img/infinite-loop-03.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 980px;
+  position: relative;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+
+.contact-item {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.item-link {
+  display: flex;
+  align-items: center;
+}
+
+.item-link i,
+.item-link span {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.item-link:hover i,
+.item-link:hover span {
+  color: #3496d8;
+}
+
+.tm-input {
+  margin: 0 0 20px 0;
+  width: 90%;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.tm-btn-submit {
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #369;
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+.tm-btn-submit:hover {
+  color: #fff;
+  background-color: #38b;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.tm-footer {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+}
+
+/* .tm-footer a {
+  color: #fff;
+}
+
+.tm-footer a:hover {
+  color: #9cf;
+}
+
+.tm-footer-link {
+  color: white;
+}
+
+.tm-footer-link:hover,
+.tm-footer-link:focus {
+  color: #38b;
+  text-decoration: none;
+} */
+
+p {
+  line-height: 1.9;
+}
+
+@media (min-width: 768px) {
+  .tm-intro-text-container {
+    padding-left: 0px;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1275px;
+  }
+
+  .tm-container-gallery {
+    max-width: 1290px;
+  }
+
+  .tm-container-contact {
+    max-width: 1063px;
+  }
+}
+
+@media (max-width: 991px) {
+  .tm-intro-text-container {
+    padding-left: 15px;
+    padding-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tm-intro-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tm-btn-submit {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    max-width: 200px;
+    text-align: right;
+  }
+
+  .navbar-collapse {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #707070;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-gallery-container {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tm-gallery-container-2 {
+    max-width: 350px;
+  }
+
+  .slick-dots li {
+    margin: 0 8px;
+  }
+
+  .tm-gallery-item {
+    margin: 0;
+  }
+}
+
+#whatwedo {
+  background-color: #f8fbfd; /* A very light, subtle blue-grey background for the entire section */
+}
+
+/* Base Hexagon Wrapper Styles */
+.icon-hexagon-wrapper {
+  width: 250px; /* Adjust size as needed */
+  height: 250px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft initial shadow */
+  transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  margin: 0 auto 30px auto; /* Centered horizontally, 30px space below for stacking */
+}
+
+/* Icon Styles within Hexagon */
+.icon-hexagon-wrapper i {
+  font-size: 6rem; /* Adjust icon size */
+  line-height: 1; /* Helps vertical alignment */
+  transition: color 0.4s ease-in-out; /* Smooth icon color change */
+}
+
+/* --- Milky Color Definitions & Hover Effects for Hexagons --- */
+
+/* Color Set 1: Light Blue */
+.hexagon-color-1 {
+  background-color: #e1f5fe;
+} /* Milky Blue */
+.hexagon-color-1 i {
+  color: #2196f3;
+} /* Primary Blue for icon */
+.hexagon-color-1:hover {
+  background-color: #90caf9;
+} /* Brighter Blue on hover */
+.hexagon-color-1:hover i {
+  color: #1976d2;
+} /* Darker Blue icon on hover */
+
+/* Color Set 2: Light Green */
+.hexagon-color-2 {
+  background-color: #e8f5e9;
+} /* Milky Green */
+.hexagon-color-2 i {
+  color: #4caf50;
+} /* Primary Green for icon */
+.hexagon-color-2:hover {
+  background-color: #a5d6a7;
+} /* Brighter Green on hover */
+.hexagon-color-2:hover i {
+  color: #388e3c;
+} /* Darker Green icon on hover */
+
+/* Color Set 3: Light Orange/Peach */
+.hexagon-color-3 {
+  background-color: #fff3e0;
+} /* Milky Orange */
+.hexagon-color-3 i {
+  color: #ff9800;
+} /* Primary Orange for icon */
+.hexagon-color-3:hover {
+  background-color: #ffcc80;
+} /* Brighter Orange on hover */
+.hexagon-color-3:hover i {
+  color: #fb8c00;
+} /* Darker Orange icon on hover */
+
+/* Color Set 4: Light Purple */
+.hexagon-color-4 {
+  background-color: #f3e5f5;
+} /* Milky Purple */
+.hexagon-color-4 i {
+  color: #9c27b0;
+} /* Primary Purple for icon */
+.hexagon-color-4:hover {
+  background-color: #ce93d8;
+} /* Brighter Purple on hover */
+.hexagon-color-4:hover i {
+  color: #7b1fa2;
+} /* Darker Purple icon on hover */
+
+/* Color Set 5: Light Teal */
+.hexagon-color-5 {
+  background-color: #e0f2f7;
+} /* Milky Teal */
+.hexagon-color-5 i {
+  color: #00bcd4;
+} /* Primary Teal for icon */
+.hexagon-color-5:hover {
+  background-color: #80deea;
+} /* Brighter Teal on hover */
+.hexagon-color-5:hover i {
+  color: #0097a7;
+} /* Darker Teal icon on hover */
+
+/* Color Set 6: Light Red/Pinkish */
+.hexagon-color-6 {
+  background-color: #f8e4e5;
+} /* Milky Red/Pink */
+.hexagon-color-6 i {
+  color: #e53935;
+} /* Primary Red for icon */
+.hexagon-color-6:hover {
+  background-color: #ef9a9a;
+} /* Brighter Red on hover */
+.hexagon-color-6:hover i {
+  color: #c62828;
+} /* Darker Red icon on hover */
+
+/* --- Animation for MEDIUM Zoom In/Out --- */
+@keyframes zoom-pulse-medium {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.05); /* Medium zoom in */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animated-glowing-pulse {
+  animation: zoom-pulse-medium 2s infinite alternate ease-in-out; /* Apply new animation, faster speed */
+}
+
+/* Enhanced Hover effect for extra interaction (overrides animation momentarily) */
+.icon-hexagon-wrapper:hover {
+  transform: scale(1.1); /* Slightly more zoom on direct hover */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  animation: none; /* Stop the continuous pulse while hovering */
+}
+
+---
+
+/* --- Separator between Service Blocks --- */
+.service-block-separator {
+  border-bottom: 1px dashed #dcdcdc; /* Light grey dashed line */
+  margin-top: 40px; /* Space above separator */
+  margin-bottom: 40px; /* Space below separator */
+  width: 80%; /* Width of the separator line */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style for the entire service block row */
+.service-block-unique {
+  background-color: #fdfdfd; /* A very light, almost white background */
+  border: 1px solid #e0e0e0; /* A subtle light border */
+  border-radius: 10px; /* Slightly rounded corners for the block */
+  padding: 30px; /* Padding inside the block */
+  margin-bottom: 50px !important; /* Increase bottom margin for more space between blocks */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the entire service block */
+.service-block-unique:hover {
+  background-color: #f8f8f8; /* Slightly darker on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+/* Text Decorations for uniqueness */
+.service-block-unique .custom-text-decoration {
+  font-weight: 700; /* Make the heading bolder */
+  letter-spacing: 0.5px; /* Add slight letter spacing */
+  color: #333; /* Ensure strong color for heading */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle text shadow */
+}
+
+.service-block-unique .custom-paragraph-style {
+  font-size: 1.05rem; /* Slightly larger paragraph text */
+  line-height: 1.7; /* Improve readability with more line height */
+  color: #555; /* Darker gray for better contrast */
+}
+
+/* Ensure the button within this block maintains its style or adjust if needed */
+.service-block-unique .btn {
+  margin-top: 15px; /* Add some space above the button */
+}
+
+---
+
+/* --- Testimonial Section Layout --- */
+
+/* Ensures the entire carousel container is centered */
+.tm-gallery-container-2 {
+  max-width: 900px; /* Adjust max-width as needed for content flow */
+  margin: 0 auto; /* Center the carousel container */
+}
+
+/* Make each testimonial item a block for stacking, but limit its width and center it */
+.tm-testimonials-carousel .tm-testimonial-item {
+  display: block; /* Stack image, quote, and name vertically */
+  text-align: center; /* Default for image to be centered */
+  padding: 25px; /* Add internal padding to the testimonial block */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Subtle background for the testimonial card */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: 0 auto 30px auto; /* Center the whole testimonial block and add space below */
+  width: 90%; /* Occupy 90% width of the carousel slide */
+  max-width: 600px; /* Limit the max width of the testimonial item for better text flow */
+}
+
+/* Style for the testimonial image - Centered */
+.tm-testimonial-item img {
+  width: 120px; /* Original size */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Ensure it's perfectly round */
+  display: block; /* Important for margin: auto to work */
+  margin: 0 auto 15px auto; /* Center the image horizontally, add space below */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow to image */
+}
+
+/* Styles for the blockquote (Testimonial Quote) - Left Aligned */
+.tm-testimonial-item blockquote {
+  margin: 0 auto 10px auto; /* Center blockquote itself as a block element */
+  text-align: left; /* Crucial: Align the text inside to the left */
+  font-size: 1.1rem; /* Slightly larger quote font size */
+  line-height: 1.6; /* Improved readability */
+  color: #f0f0f0; /* Lighter color for quote text */
+  max-width: 90%; /* Limit width to allow centering if needed */
+}
+
+/* Styles for the figcaption (Author Name) - Right Aligned */
+.tm-testimonial-item figcaption {
+  text-align: right; /* Crucial: Align the author name to the right */
+  font-size: 0.95rem; /* Adjust font size */
+  color: #e0e0e0; /* Lighter color for name */
+  margin-top: 10px; /* Space above author name */
+}
+
+.tm-testimonial-item figcaption span {
+  color: #ccc; /* Ensure the muted text (title) is visible */
+}
+
+---
+
+/* --- Contact Section Card Styling --- */
+
+/* Overall container for the cards */
+#contact .col-lg-10.mx-auto .row {
+  justify-content: center; /* Center cards if there aren't enough to fill a row */
+}
+
+.contact-card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background */
+  border-radius: 15px; /* More rounded corners for a card look */
+  padding: 30px 20px; /* Internal padding */
+  min-height: 220px; /* Ensure cards have a consistent height */
+  transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+  display: flex; /* Make it a flex container to center content */
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Very light border */
+}
+
+.contact-card:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Slightly more opaque on hover */
+  transform: translateY(-7px); /* Lift effect on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+.contact-card .item-link {
+  text-decoration: none; /* Remove default underline from links */
+  color: inherit; /* Inherit color from parent for initial state */
+  display: flex; /* Make link also a flex container */
+  flex-direction: column; /* Stack contents inside link */
+  align-items: center; /* Center items inside link */
+  width: 100%; /* Ensure link takes full width of card */
+}
+
+.contact-card .item-link:hover {
+  text-decoration: none; /* Keep no underline on hover */
+  color: #fff; /* Ensure text remains white on hover */
+}
+
+.contact-card .item-link i {
+  color: #00bcd4; /* Accent color for icons */
+  font-size: 3.5rem; /* Large icon size */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-card:hover .item-link i {
+  color: #2196f3; /* Change icon color on card hover */
+  transform: scale(1.1); /* Slight zoom on icon */
+}
+
+.contact-card .card-title {
+  font-size: 1.4rem; /* Larger title for emphasis */
+  font-weight: 600;
+  margin-top: 15px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.contact-card .card-text {
+  font-size: 1rem; /* Standard text size for details */
+  color: #eee; /* Lighter color for details */
+  text-align: center;
+}
+
+---
+
+/* --- Animated Button Styles --- */
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1; /* Ensure text is above pseudo-element */
+  min-width: 250px; /* Give it a consistent minimum width */
+}
+
+.animated-button i {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animated-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay for animation */
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.animated-button:hover::after {
+  left: 0; /* Slide in from left on hover */
+}
+
+.animated-button:hover i {
+  transform: translateX(5px); /* Arrow moves slightly right on hover */
+}
+
+/* --- Media Queries for Responsiveness (consolidated) --- */
+@media (max-width: 768px) {
+  .icon-hexagon-wrapper {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 25px; /* Adjust mobile vertical spacing */
+  }
+  .icon-hexagon-wrapper i {
+    font-size: 4rem;
+  }
+  .service-block-unique {
+    padding: 20px; /* Reduce padding on smaller screens */
+    margin-bottom: 30px !important; /* Adjust bottom margin */
+  }
+  .service-block-separator {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+  }
+  .tm-testimonials-carousel .tm-testimonial-item {
+    padding: 20px;
+    max-width: 90%; /* Allow wider block on small screens */
+  }
+  .tm-testimonial-item img {
+    margin-bottom: 10px; /* Adjust spacing on mobile */
+  }
+  .tm-testimonial-item blockquote {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+  .tm-testimonial-item figcaption {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+  .contact-card {
+    padding: 25px 15px;
+    min-height: 200px;
+  }
+  .contact-card .item-link i {
+    font-size: 3rem; /* Smaller icons on mobile */
+  }
+  .contact-card .card-title {
+    font-size: 1.2rem;
+  }
+  .contact-card .card-text {
+    font-size: 0.9rem;
+  }
+  .animated-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    min-width: unset;
+    width: 100%;
+  }
+}
