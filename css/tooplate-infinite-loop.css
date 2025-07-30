@@ -21,11 +21,11 @@ a {
   color: #38b;
 }
 
-a:hover,
+/* a:hover,
 a:focus {
   text-decoration: none;
   color: #d40;
-}
+} */
 
 a:focus {
   outline: none;
@@ -114,7 +114,9 @@ blockquote {
 
 .tm-navbar.scroll .tm-nav-link {
   color: #369;
+  background-color: #000;
 }
+
 @media (max-width: 767.98px) {
   .navbar-nav {
     margin-left: 0 !important;
@@ -138,7 +140,6 @@ blockquote {
   }
 
   .dropdown-menu {
-    background-color: rgb(177, 171, 171);
     border: none;
   }
 
@@ -154,6 +155,15 @@ blockquote {
   .navbar-toggler-icon {
     color: #333;
   }
+  .tm-nav-link.current,
+  .tm-navbar.scroll .tm-nav-link.current {
+    background-color: transparent !important; /* Remove the dark blue */
+    color: #000 !important; /* Optional: use standard text color */
+  }
+
+  .tm-nav-link {
+    background-color: transparent !important; /* Default mobile links background */
+  }
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
@@ -162,12 +172,12 @@ blockquote {
   color: #fff;
   background-color: #369;
 }
-/* Ensure text is white on hover and when dropdown is expanded */
+/*
 .tm-navbar.scroll .dropdown-toggle.tm-nav-link:hover,
 .tm-navbar.scroll .dropdown-toggle.tm-nav-link:focus,
 .tm-navbar.scroll .dropdown-toggle.tm-nav-link[aria-expanded="true"] {
   color: #fff !important;
-}
+} */
 
 .navbar-toggler {
   border: 1px solid white;
