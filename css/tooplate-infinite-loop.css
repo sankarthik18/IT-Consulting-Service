@@ -185,7 +185,7 @@ blockquote {
   padding-right: 10px;
 }
 
-.navbar-toggler-icon {
+/* .navbar-toggler-icon {
   color: white;
   padding-top: 6px;
 }
@@ -199,7 +199,7 @@ blockquote {
 }
 .tm-navbar.scroll .dropdown-toggle.tm-nav-link {
   color: #369;
-}
+} */
 
 /* Fix when dropdown is clicked (expanded) */
 .tm-navbar.scroll .dropdown-toggle.tm-nav-link[aria-expanded="true"] {
@@ -581,7 +581,7 @@ figure.effect-honey:hover h2 i {
   background-image: url(../img/infinite-loop-03.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 980px;
+  min-height: 200px;
   position: relative;
   padding-bottom: 50px;
   padding-top: 100px;
@@ -654,24 +654,6 @@ figure.effect-honey:hover h2 i {
   right: 0;
   padding: 0 15px;
 }
-
-/* .tm-footer a {
-  color: #fff;
-}
-
-.tm-footer a:hover {
-  color: #9cf;
-}
-
-.tm-footer-link {
-  color: white;
-}
-
-.tm-footer-link:hover,
-.tm-footer-link:focus {
-  color: #38b;
-  text-decoration: none;
-} */
 
 p {
   line-height: 1.9;

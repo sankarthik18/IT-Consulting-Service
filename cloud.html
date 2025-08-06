@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>IT Consulting Services - Cybersecurity Solutions</title>
+    <title>IT Consulting Services - Cloud Transformation</title>
     <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -17,54 +17,49 @@
             width: 100%;
         }
 
-        /* Navbar style for subpages */
-        .tm-navbar.scroll {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding-top: 10px;
-            padding-bottom: 10px;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
-        .tm-navbar.scroll .navbar-brand,
-        .tm-navbar.scroll .nav-link,
-        .tm-navbar.scroll .fas {
-            color: #000 !important;
+        p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
-        .tm-navbar.scroll .dropdown-menu .dropdown-item {
-            color: #343a40 !important;
+        .your-custom-wide-element {
+            min-width: unset;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        .tm-navbar.scroll .dropdown-menu .dropdown-item:hover {
-            background-color: #e9ecef;
-            color: #007bff !important;
+        .content-section-cybersecurity {
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
         }
 
-        /* Subpage Hero Section Specifics */
-        .tm-hero-text-container-subpage {
-            height: 350px;
-            /* Taller hero for a more impactful header */
+        /* Parallax Section */
+        .parallax-section {
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image_d2275e.png');
-            /* Using your cybersecurity image */
-            background-size: cover;
-            background-position: center;
             color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px #000;
             text-align: center;
-            position: relative;
         }
 
-        .tm-hero-text-container-subpage h1 {
-            font-size: 3.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .tm-hero-text-container-subpage p {
-            font-size: 1.5rem;
-            font-weight: 300;
+        /* Regular Content */
+        .content-section {
+            padding: 100px 20px;
+            background-color: #f7f7f7;
         }
 
         /* Main Content Styling */
@@ -92,14 +87,14 @@
             font-weight: 700;
             margin-bottom: 25px;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
 
         .section-block h3 {
             color: #343a40;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 20px;
-            font-size: 1.8rem;
+            font-size: 1.0rem;
         }
 
         .section-block p {
@@ -201,7 +196,7 @@
 
         .why-choose-us-item h4 {
             color: #343a40;
-            font-size: 1.5rem;
+            font-size: 1.0rem;
             margin-bottom: 10px;
         }
 
@@ -282,10 +277,10 @@
 </head>
 
 <body>
-    <section id="hero-subpage" class="text-white tm-font-big tm-parallax">
-        <nav class="navbar navbar-expand-md tm-navbar fixed-top">
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+        <nav class="navbar navbar-expand-md  tm-navbar">
             <div class="container">
-                <a class="navbar-brand" href="index.html">IT Consulting Services</a>
+                <a class="navbar-brand" href="index.html">Follwo Info Tech</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -304,15 +299,18 @@
                                 Services
                             </a>
                             <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <a class="dropdown-item" href="service1.html">Cloud Transformation</a>
-                                <a class="dropdown-item" href="service2.html">Cybersecurity</a>
-                                <a class="dropdown-item" href="service3.html">IT Roadmap</a>
-                                <a class="dropdown-item" href="service4.html">Software Development</a>
+                                <a class="dropdown-item" href="digitalmarketing.html">Result-Driven Digital
+                                    Marketing</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="cloud.html">Scalable Cloud Solutions</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="webdevelopment.html">Custom Web Development</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="datainsights.html">Data Analytics & Insights</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item font-weight-bold" href="services.html">All Services</a>
                             </div>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link tm-nav-link" href="career.html">Career</a>
                         </li>
@@ -327,11 +325,20 @@
             </div>
         </nav>
 
-        <div class="text-center tm-hero-text-container-subpage">
-            <div data-aos="fade-up" data-aos-duration="1500">
-                <h1 class="tm-hero-title mb-4">Cybersecurity Solutions</h1>
-                <p class="lead">Protecting Your Digital Assets from Evolving Threats</p>
+        <div class="text-center tm-hero-text-container">
+            <div class="tm-hero-text-container-inner m-4" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="tm-hero-title display-4 mb-4">Cloud Services</h1>
+                <p class="tm-hero-subtitle lead mb-5">
+                    Scalable, secure, and cost-effective cloud solutions tailored for your business.<br />
+                    From migration to automation — we help you modernize and thrive in the cloud.
+                </p>
             </div>
+        </div>
+
+        <div class="tm-next tm-intro-next position-absolute bottom-0 w-100 pb-4">
+            <a href="#whatwedo" class="text-center tm-down-arrow-link d-block">
+                <i class="fas fa-2x fa-arrow-down tm-down-arrow text-white"></i>
+            </a>
         </div>
     </section>
 
@@ -340,16 +347,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10" data-aos="fade-up">
                     <div class="section-block">
-                        <h2>Your Shield in the Digital World</h2>
-                        <p>In today's interconnected business landscape, cybersecurity is no longer an option—it's a
-                            necessity. With cyber threats becoming more sophisticated and frequent, protecting your
-                            sensitive data, intellectual property, and critical infrastructure is paramount. Our
-                            comprehensive cybersecurity solutions are designed to build resilient defenses against a
-                            wide array of attacks, ensuring your business continuity and reputation.</p>
-                        <p>We combine cutting-edge technology with deep expertise to identify vulnerabilities, implement
-                            robust security measures, and establish proactive strategies that safeguard your digital
-                            ecosystem. From compliance to incident response, we empower your organization to operate
-                            securely and confidently.</p>
+                        <h2>About Scalable Cloud Services for Modern Businesses</h2>
+                        <p>Unlock agility, flexibility, and security with our end-to-end cloud services. Whether you
+                            need seamless migration, infrastructure management, or disaster recovery, our certified
+                            specialists ensure a smooth transition and continuous optimization of your cloud
+                            environment.</p>
                     </div>
                 </div>
             </div>
@@ -357,59 +359,99 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
                     <div class="section-block bg-primary-light">
-                        <h2>Our Comprehensive Cybersecurity Services</h2>
+                        <h2>Our Comprehensive Scalable Cloud Services for Modern Businesses</h2>
                         <div class="row mt-5">
                             <div class="col-md-6 mb-4">
-                                <div class="service-point" data-aos="fade-up" data-aos-delay="200">
-                                    <i class="fas fa-search-dollar service-icon"></i>
-                                    <h4>Risk Assessment & Management</h4>
-                                    <p>Identify, analyze, and prioritize potential cybersecurity risks to your
-                                        organization. We develop strategies to mitigate these risks effectively,
-                                        ensuring a robust security posture.</p>
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="fas fa-cloud-upload-alt service-icon"></i>
+                                    <h4>Cloud Migration Services</h4>
+                                    <ul>
+                                        <li>Assessment of current systems</li>
+                                        <li>Migration roadmap & risk analysis</li>
+                                        <li>Lift-and-shift or refactor strategy</li>
+                                        <li>Post-migration testing & optimization</li>
+                                    </ul>
                                 </div>
                             </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="fas fa-server service-icon"></i>
+                                    <h4>Cloud Infrastructure Setup & Management</h4>
+                                    <ul>
+                                        <li>VPC, subnet, and instance setup</li>
+                                        <li>Load balancing & auto-scaling</li>
+                                        <li>Serverless architecture (Lambda, Cloud Functions)</li>
+                                        <li>Role-based access & IAM configuration</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                             <div class="col-md-6 mb-4">
                                 <div class="service-point" data-aos="fade-up" data-aos-delay="300">
-                                    <i class="fas fa-lock service-icon"></i>
-                                    <h4>Threat Detection & Response</h4>
-                                    <p>Implement advanced tools and processes for real-time threat monitoring,
-                                        detection, and rapid incident response, minimizing potential damage from
-                                        cyberattacks.</p>
+                                    <i class="fas fa-shield-alt service-icon"></i>
+                                    <h4>Cloud Security & Compliance</h4>
+                                    <ul>
+                                        <li>Identity & access control setup</li>
+                                        <li>Encryption (at rest & in transit)</li>
+                                        <li>Firewall, WAF, and threat monitoring</li>
+                                        <li>Compliance alignment (GDPR, HIPAA, ISO)</li>
+                                    </ul>
                                 </div>
                             </div>
+
                             <div class="col-md-6 mb-4">
                                 <div class="service-point" data-aos="fade-up" data-aos-delay="400">
-                                    <i class="fas fa-shield-alt service-icon"></i>
-                                    <h4>Vulnerability Management</h4>
-                                    <p>Proactive scanning and penetration testing to discover and patch vulnerabilities
-                                        in your systems, applications, and networks before they can be exploited.</p>
+                                    <i class="fas fa-database service-icon"></i>
+                                    <h4>Cloud Backup & Disaster Recovery</h4>
+                                    <ul>
+                                        <li>Scheduled cloud backups</li>
+                                        <li>Geo-redundant storage</li>
+                                        <li>DR plans with RTO/RPO targets</li>
+                                        <li>Rapid failover and system recovery</li>
+                                    </ul>
                                 </div>
                             </div>
+
                             <div class="col-md-6 mb-4">
                                 <div class="service-point" data-aos="fade-up" data-aos-delay="500">
-                                    <i class="fas fa-clipboard-check service-icon"></i>
-                                    <h4>Compliance & Governance</h4>
-                                    <p>Ensure adherence to industry regulations (e.g., GDPR, HIPAA, ISO 27001) and
-                                        establish strong governance frameworks for data protection and privacy.</p>
+                                    <i class="fas fa-cogs service-icon"></i>
+                                    <h4>DevOps & Cloud Automation</h4>
+                                    <ul>
+                                        <li>CI/CD pipeline setup (Jenkins, GitHub Actions)</li>
+                                        <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+                                        <li>Containerization (Docker, Kubernetes)</li>
+                                        <li>Automated testing & rollback strategies</li>
+                                    </ul>
                                 </div>
                             </div>
+
                             <div class="col-md-6 mb-4">
                                 <div class="service-point" data-aos="fade-up" data-aos-delay="600">
-                                    <i class="fas fa-user-shield service-icon"></i>
-                                    <h4>Security Awareness Training</h4>
-                                    <p>Educate your employees on best practices for cybersecurity, transforming them
-                                        into your first line of defense against phishing, social engineering, and other
-                                        threats.</p>
+                                    <i class="fas fa-chart-pie service-icon"></i>
+                                    <h4>Cloud Consulting & Cost Optimization</h4>
+                                    <ul>
+                                        <li>Architecture planning & roadmap</li>
+                                        <li>Cost analysis & billing review</li>
+                                        <li>Performance-to-cost ratio improvements</li>
+                                        <li>Recommendations for reserved instances or autoscaling</li>
+                                    </ul>
                                 </div>
                             </div>
+
                             <div class="col-md-6 mb-4">
                                 <div class="service-point" data-aos="fade-up" data-aos-delay="700">
-                                    <i class="fas fa-cloud-meatball service-icon"></i>
-                                    <h4>Cloud Security</h4>
-                                    <p>Secure your cloud environments, applications, and data with cloud-native security
-                                        strategies and configurations, tailored for AWS, Azure, and GCP.</p>
+                                    <i class="fas fa-database service-icon"></i>
+                                    <h4>Cloud Database Management</h4>
+                                    <ul>
+                                        <li>Database selection & setup (RDS, DynamoDB, Firestore, etc.)</li>
+                                        <li>Indexing, performance tuning & backups</li>
+                                        <li>High-availability & replication strategies</li>
+                                        <li>Real-time monitoring & maintenance</li>
+                                    </ul>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -453,11 +495,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
                     <div class="call-to-action-block">
-                        <h2 data-aos="fade-up">Ready to Strengthen Your Security?</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Don't wait for a breach to act. Let us help you build
-                            an impenetrable defense.</p>
+                        <h2 data-aos="fade-up">Ready to With Us?</h2>
+
                         <a href="contact.html" class="btn btn-main-cta" data-aos="zoom-in" data-aos-delay="200">
-                            Get a Free Security Assessment <i class="fas fa-arrow-right ml-2"></i>
+                            Conact Us <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -468,8 +509,8 @@
                     <a href="services.html" class="btn btn-back-link">
                         <i class="fas fa-arrow-left mr-2"></i> Back to All Services
                     </a>
-                    <a href="index.html" class="btn btn-primary btn-lg rounded-pill animated-button ml-3">
-                        Back to Home <i class="fas fa-home ml-2"></i>
+                    <a href="services.html" class="btn btn-back-link">
+                        Back to Home <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </div>
@@ -479,75 +520,88 @@
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
+                <!-- Company Info -->
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="text-uppercase mb-4 text-primary">IT Consulting Service</h5>
+                    <h5 class="text-uppercase mb-4 text-primary">Follo InfoTech</h5>
                     <p class="text-white-50 small">
-                        Empowering businesses with cutting-edge IT solutions for innovation, security, and growth.
+                        We provide scalable, secure, and modern IT solutions tailored to accelerate your business
+                        success.
                     </p>
-                    <p class="text-white-50 small">
-                        &copy; 2024 IT Consulting Service. All Rights Reserved.
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2025 Follo InfoTech. All rights reserved.
                     </p>
                 </div>
 
+                <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h5 class="text-uppercase mb-4 text-primary">Quick Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none"><i
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none"><i
                                     class="fas fa-home mr-2"></i>Home</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none"><i
+                        <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none"><i
                                     class="fas fa-handshake mr-2"></i>Services</a></li>
-                        <li class="mb-2"><a href="#testimonials" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-comment-alt mr-2"></i>Testimonials</a></li>
-                        <li class="mb-2"><a href="#gallery" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-images mr-2"></i>Gallery</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none"><i
+                        <li class="mb-2"><a href="#clients" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-comment-alt mr-2"></i>Clients</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-images mr-2"></i>Portfolio</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none"><i
                                     class="fas fa-envelope mr-2"></i>Contact</a></li>
                     </ul>
                 </div>
 
+                <!-- Our Expertise -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <h5 class="text-uppercase mb-4 text-primary">Our Expertise</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="service1.html" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-cloud mr-2"></i>Cloud Solutions</a></li>
-                        <li class="mb-2"><a href="service2.html" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-shield-alt mr-2"></i>Cybersecurity</a></li>
-                        <li class="mb-2"><a href="service3.html" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-chart-line mr-2"></i>IT Strategy</a></li>
-                        <li class="mb-2"><a href="service6.html" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-hands-helping mr-2"></i>Managed Services</a></li>
-                        <li class="mb-2"><a href="service5.html" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-database mr-2"></i>Data Analytics</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="digitalmarketing.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-cloud mr-2"></i>Digital Marketing</a></li>
+                        <li class="mb-2"><a href="cloud.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-shield-alt mr-2"></i>Scalable Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="webdevelopment.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-chart-line mr-2"></i>Custom Web Development</a></li>
+                        <li class="mb-2"><a href="datainsights.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-hands-helping mr-2"></i>Data Analytics & Insights</a></li>
                     </ul>
                 </div>
 
+                <!-- Contact Info (as before) -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <h5 class="text-uppercase mb-4 text-primary">Get In Touch</h5>
                     <ul class="list-unstyled text-white-50">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Your Business Location, Tiruppur
-                        </li>
-                        <li class="mb-2"><i class="fas fa-phone-alt mr-2"></i> +91 (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 IT Park Road, Peelamedu,
+                            Tiruppur, Tamil Nadu – 641605</li>
+                        <li class="mb-2"><i class="fas fa-phone mr-2"></i> +91 (123) 456-7890</li>
                         <li class="mb-2"><i class="fas fa-envelope mr-2"></i> info@youritconsulting.com</li>
                     </ul>
-                    <h5 class="text-uppercase mb-3 mt-4 text-primary">Follow Us</h5>
-                    <div class="social-links d-flex">
-                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
-                                class="fab fa-facebook-f fa-2x"></i></a>
-                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
-                                class="fab fa-twitter fa-2x"></i></a>
-                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
-                                class="fab fa-linkedin-in fa-2x"></i></a>
-                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50"><i
-                                class="fab fa-instagram fa-2x"></i></a>
-                    </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-12 text-center text-white-50 small">
-                    Designed with <i class="fas fa-heart text-danger"></i> by
-                    <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates" target="_blank"
-                        class="text-white-50">TOOPLATE</a>
-                    &amp; Developed by [Your Company Name/Your Name]
+            <hr class="border-top border-secondary my-4">
+            <div class="row mt-4 text-center">
+                <div class="col-12">
+                    <h5 class="text-uppercase text-primary mb-3">Follow Us</h5>
+                    <div class="social-links d-flex justify-content-center mb-3">
+                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </a>
+                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="text-white-50 small">
+                        Designed with <i class="fas fa-heart text-danger"></i> by <a href="https://www.tooplate.com"
+                            class="text-white-50" target="_blank" rel="nofollow">TOOPLATE</a> &amp; Developed by Your
+                        Company Name.
+                    </p>
                 </div>
             </div>
         </div>
@@ -589,6 +643,7 @@
         });
 
         // For this individual service page, smooth scroll is likely not needed
+        // but keeping it for consistency if any internal anchors are added later.
         $('a[href^="#"]').on('click', function (event) {
             if (this.hash !== '') {
                 event.preventDefault();

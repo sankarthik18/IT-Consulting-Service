@@ -14,7 +14,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
     <style>
-        /* Global Responsive Fixes from index.html style block */
         body,
         html {
             overflow-x: hidden;
@@ -32,10 +31,8 @@
             overflow-wrap: break-word;
         }
 
-        /* Specific styles for the Career page */
         #career-hero {
             background-image: url('img/career-hero-bg.jpg');
-            /* Replace with a suitable career-themed image */
             background-size: cover;
             background-position: center;
         }
@@ -43,7 +40,6 @@
         .tm-career-section {
             padding: 80px 0;
             background-color: #f8f9fa;
-            /* Light background for content sections */
         }
 
         .tm-career-section.bg-white {
@@ -66,7 +62,6 @@
 
         .job-opening h3 {
             color: #007bff;
-            /* Primary blue color for job titles */
             margin-bottom: 15px;
             font-weight: 600;
         }
@@ -83,7 +78,6 @@
 
         .apply-btn {
             background-color: #28a745;
-            /* Green for apply button */
             border-color: #28a745;
             color: #fff;
             padding: 10px 25px;
@@ -120,9 +114,9 @@
 
 <body>
     <section id="infinite" class="text-white tm-font-big tm-parallax">
-        <nav class="navbar navbar-expand-md tm-navbar">
+        <nav class="navbar navbar-expand-md  tm-navbar">
             <div class="container">
-                <a class="navbar-brand" href="index.html">IT Consulting Services</a>
+                <a class="navbar-brand" href="index.html">Follwo Info Tech</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -134,23 +128,27 @@
                         <li class="nav-item">
                             <a class="nav-link tm-nav-link" href="index.html">Home</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle tm-nav-link" href="#" id="servicesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Services
                             </a>
                             <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <a class="dropdown-item" href="services.html">Cloud Transformation</a>
-                                <a class="dropdown-item" href="services.html">Cybersecurity</a>
-                                <a class="dropdown-item" href="services.html">IT Roadmap</a>
-                                <a class="dropdown-item" href="services.html">Software Development</a>
+                                <a class="dropdown-item" href="digitalmarketing.html">Result-Driven Digital
+                                    Marketing</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="cloud.html">Scalable Cloud Solutions</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="webdevelopment.html">Custom Web Development</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="datainsights.html">Data Analytics & Insights</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item font-weight-bold" href="services.html">All Services</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tm-nav-link active" href="career.html">Career <span
-                                    class="sr-only">(current)</span></a>
+                            <a class="nav-link tm-nav-link" href="career.html">Career</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link tm-nav-link" href="about.html">About</a>
@@ -162,15 +160,21 @@
                 </div>
             </div>
         </nav>
-        <div id="career-hero"
-            class="text-center tm-hero-text-container d-flex align-items-center justify-content-center">
+
+        <div class="text-center tm-hero-text-container ">
             <div class="tm-hero-text-container-inner m-4" data-aos="fade-up" data-aos-duration="1500">
-                <h1 class="tm-hero-title display-4 mb-4 text-white">Join Our Team</h1>
-                <p class="tm-hero-subtitle lead mb-5 text-white-50">
-                    Shape the Future of IT with Us. Discover Your Next Career Opportunity.
+                <h1 class="tm-hero-title display-4 mb-4">Innovating Your Digital Future</h1>
+                <p class="tm-hero-subtitle lead mb-5">
+                    Your skills can make a real impact on businesses worldwide
+                    <br />- Growing Together.
                 </p>
-                <a href="#open-positions" class="btn btn-primary btn-lg mt-3">View Open Positions</a>
             </div>
+        </div>
+
+        <div class="tm-next tm-intro-next position-absolute bottom-0 w-100 pb-4">
+            <a href="#whatwedo" class="text-center tm-down-arrow-link d-block">
+                <i class="fas fa-2x fa-arrow-down tm-down-arrow text-white"></i>
+            </a>
         </div>
     </section>
 
@@ -178,7 +182,7 @@
         <div class="container">
             <div class="row mb-5 text-center">
                 <div class="col-12" data-aos="fade-up">
-                    <h2 class="tm-section-title text-center text-primary">Why Work With IT Consulting Service?</h2>
+                    <h2 class="tm-section-title text-center text-primary">Why Work With Follwo Info Tech?</h2>
                     <p class="lead text-muted mx-auto" style="max-width: 800px;">
                         We believe in fostering a dynamic and innovative environment where talent thrives. Join a team
                         dedicated to excellence and making a real impact.
@@ -242,7 +246,7 @@
         <div class="container">
             <div class="row mb-5 text-center">
                 <div class="col-12" data-aos="fade-up">
-                    <h2 class="tm-section-title text-center text-primary">Current Open Positions</h2>
+                    <h2 class="tm-section-title text-center text-primary">Positions</h2>
                     <p class="lead text-muted mx-auto" style="max-width: 800px;">
                         Explore our exciting opportunities and take the next step in your IT career.
                     </p>
@@ -269,84 +273,14 @@
                             **Requirements:** 8+ years experience in cloud architecture (Azure/AWS/GCP), strong
                             knowledge of cloud security, DevOps, and microservices.
                         </p>
-                        <a href="apply.html?position=SeniorCloudArchitect" class="btn apply-btn">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="job-opening m-2">
-                        <h3>Cybersecurity Analyst</h3>
-                        <div class="meta-info">
-                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Remote</span>
-                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-calendar-alt"></i> Posted: July 15, 2025</span>
-                        </div>
-                        <p class="text-muted">
-                            Join our cybersecurity team to monitor, detect, and respond to security incidents, ensuring
-                            the protection of client data and systems.
-                        </p>
-                        <p class="text-muted small">
-                            **Responsibilities:** Security monitoring, incident response, vulnerability assessment,
-                            security policy enforcement.
-                            <br>
-                            **Requirements:** 3+ years in cybersecurity, SIEM tools, network security, and security
-                            certifications (e.g., CompTIA Security+, CEH).
-                        </p>
-                        <a href="apply.html?position=CybersecurityAnalyst" class="btn apply-btn">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="job-opening m-2">
-                        <h3>Full Stack Developer (Mid-level)</h3>
-                        <div class="meta-info">
-                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Tiruppur, India</span>
-                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-calendar-alt"></i> Posted: July 10, 2025</span>
-                        </div>
-                        <p class="text-muted">
-                            We are looking for a versatile Full Stack Developer to build and maintain web applications
-                            for various client projects.
-                        </p>
-                        <p class="text-muted small">
-                            **Responsibilities:** Develop both front-end and back-end components, API integration,
-                            database management, testing.
-                            <br>
-                            **Requirements:** 4+ years in web development, proficiency in React/Angular/Vue,
-                            Node.js/Python/Java, and database knowledge (SQL/NoSQL).
-                        </p>
-                        <a href="apply.html?position=FullStackDeveloper" class="btn apply-btn">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="job-opening m-2">
-                        <h3>IT Support Specialist</h3>
-                        <div class="meta-info">
-                            <span class="mr-3"><i class="fas fa-map-marker-alt"></i> Tiruppur, India</span>
-                            <span class="mr-3"><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-calendar-alt"></i> Posted: July 01, 2025</span>
-                        </div>
-                        <p class="text-muted">
-                            Provide essential technical support to our internal team and clients, ensuring smooth IT
-                            operations and user satisfaction.
-                        </p>
-                        <p class="text-muted small">
-                            **Responsibilities:** Troubleshoot hardware/software issues, user support, system
-                            maintenance, documentation.
-                            <br>
-                            **Requirements:** 2+ years in IT support, strong problem-solving skills, knowledge of
-                            Windows/macOS/Linux, and networking basics.
-                        </p>
-                        <a href="apply.html?position=ITSupportSpecialist" class="btn apply-btn">Apply Now</a>
+                        <button type="button" class="btn apply-btn" disabled>Apply Now</button>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
                 <p class="lead text-muted">Didn't find what you're looking for?</p>
-                <a href="contact.html" class="btn btn-outline-primary btn-lg">Submit Your Resume for Future
-                    Opportunities</a>
+                <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact With Us</a>
             </div>
         </div>
     </section>
@@ -354,79 +288,88 @@
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
+                <!-- Company Info -->
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="text-uppercase mb-4 text-primary">IT Consulting Service</h5>
+                    <h5 class="text-uppercase mb-4 text-primary">Follo InfoTech</h5>
                     <p class="text-white-50 small">
-                        Empowering businesses with cutting-edge IT solutions for innovation, security, and growth.
+                        We provide scalable, secure, and modern IT solutions tailored to accelerate your business
+                        success.
                     </p>
-                    <p class="text-white-50 small">
-                        &copy; 2024 IT Consulting Service. All Rights Reserved.
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2025 Follo InfoTech. All rights reserved.
                     </p>
                 </div>
 
+                <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                     <h5 class="text-uppercase mb-4 text-primary">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html#infinite" class="text-white-50 text-decoration-none"><i
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none"><i
                                     class="fas fa-home mr-2"></i>Home</a></li>
-                        <li class="mb-2"><a href="index.html#whatwedo" class="text-white-50 text-decoration-none"><i
+                        <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none"><i
                                     class="fas fa-handshake mr-2"></i>Services</a></li>
-                        <li class="mb-2"><a href="index.html#testimonials" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-comment-alt mr-2"></i>Testimonials</a></li>
-                        <li class="mb-2"><a href="index.html#gallery" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-images mr-2"></i>Gallery</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none"><i
+                        <li class="mb-2"><a href="#clients" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-comment-alt mr-2"></i>Clients</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-images mr-2"></i>Portfolio</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none"><i
                                     class="fas fa-envelope mr-2"></i>Contact</a></li>
                     </ul>
                 </div>
 
+                <!-- Our Expertise -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <h5 class="text-uppercase mb-4 text-primary">Our Expertise</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="services.html#cloud" class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-cloud mr-2"></i>Cloud Solutions</a></li>
-                        <li class="mb-2"><a href="services.html#cybersecurity"
-                                class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-shield-alt mr-2"></i>Cybersecurity</a></li>
-                        <li class="mb-2"><a href="services.html#it-strategy"
-                                class="text-white-50 text-decoration-none"><i class="fas fa-chart-line mr-2"></i>IT
-                                Strategy</a></li>
-                        <li class="mb-2"><a href="services.html#managed-services"
-                                class="text-white-50 text-decoration-none"><i
-                                    class="fas fa-hands-helping mr-2"></i>Managed Services</a></li>
-                        <li class="mb-2"><a href="services.html#data-analytics"
-                                class="text-white-50 text-decoration-none"><i class="fas fa-database mr-2"></i>Data
-                                Analytics</a></li>
+                        <li class="mb-2"><a href="digitalmarketing.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-cloud mr-2"></i>Digital Marketing</a></li>
+                        <li class="mb-2"><a href="cloud.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-shield-alt mr-2"></i>Scalable Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="webdevelopment.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-chart-line mr-2"></i>Custom Web Development</a></li>
+                        <li class="mb-2"><a href="datainsights.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-hands-helping mr-2"></i>Data Analytics & Insights</a></li>
                     </ul>
                 </div>
 
+                <!-- Contact Info (as before) -->
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <h5 class="text-uppercase mb-4 text-primary">Get In Touch</h5>
                     <ul class="list-unstyled text-white-50">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Your Business Location, Tiruppur
-                        </li>
-                        <li class="mb-2"><i class="fas fa-phone-alt mr-2"></i> +91 (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 IT Park Road, Peelamedu,
+                            Tiruppur, Tamil Nadu – 641605</li>
+                        <li class="mb-2"><i class="fas fa-phone mr-2"></i> +91 (123) 456-7890</li>
                         <li class="mb-2"><i class="fas fa-envelope mr-2"></i> info@youritconsulting.com</li>
                     </ul>
-                    <h5 class="text-uppercase mb-3 mt-4 text-primary">Follow Us</h5>
-                    <div class="social-links d-flex">
-                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
-                                class="fab fa-facebook-f fa-2x"></i></a>
-                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
-                                class="fab fa-twitter fa-2x"></i></a>
-                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mr-3"><i
-                                class="fab fa-linkedin-in fa-2x"></i></a>
-                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50"><i
-                                class="fab fa-instagram fa-2x"></i></a>
-                    </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-12 text-center text-white-50 small">
-                    Designed with <i class="fas fa-heart text-danger"></i> by
-                    <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates" target="_blank"
-                        class="text-white-50">TOOPLATE</a>
-                    &amp; Developed by [Your Company Name/Your Name]
+            <hr class="border-top border-secondary my-4">
+            <div class="row mt-4 text-center">
+                <div class="col-12">
+                    <h5 class="text-uppercase text-primary mb-3">Follow Us</h5>
+                    <div class="social-links d-flex justify-content-center mb-3">
+                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </a>
+                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="text-white-50 small">
+                        Designed with <i class="fas fa-heart text-danger"></i> by <a href="https://www.tooplate.com"
+                            class="text-white-50" target="_blank" rel="nofollow">TOOPLATE</a> &amp; Developed by Your
+                        Company Name.
+                    </p>
                 </div>
             </div>
         </div>

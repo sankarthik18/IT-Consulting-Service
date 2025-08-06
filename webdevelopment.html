@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>IT Consulting Services - Cloud Transformation</title>
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <style>
+        body,
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .your-custom-wide-element {
+            min-width: unset;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .content-section-cybersecurity {
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Parallax Section */
+        .parallax-section {
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px #000;
+            text-align: center;
+        }
+
+        /* Regular Content */
+        .content-section {
+            padding: 100px 20px;
+            background-color: #f7f7f7;
+        }
+
+        /* Main Content Styling */
+        .tm-main-content {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-color: #f8f9fa;
+        }
+
+        .section-block {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 60px;
+        }
+
+        .section-block.bg-primary-light {
+            background-color: #e6f2ff;
+            /* Light blue background for emphasis */
+        }
+
+        .section-block h2 {
+            color: #007bff;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .section-block h3 {
+            color: #343a40;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 1.0rem;
+        }
+
+        .section-block p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-list li i {
+            color: #28a745;
+            /* Green checkmark */
+            margin-right: 15px;
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+
+        .service-point {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #f0f8ff;
+            /* Very light blue */
+            border-left: 5px solid #007bff;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+            /* Ensure equal height in rows */
+        }
+
+        .service-point:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-point .service-icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .service-point h4 {
+            font-size: 1.6rem;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+
+        .service-point p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .why-choose-us-item {
+            text-align: center;
+            padding: 30px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-choose-us-item:hover {
+            background-color: #e2e6ea;
+            transform: translateY(-5px);
+        }
+
+        .why-choose-us-item .icon-circle {
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-choose-us-item h4 {
+            color: #343a40;
+            font-size: 1.0rem;
+            margin-bottom: 10px;
+        }
+
+        .why-choose-us-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .call-to-action-block {
+            background-color: #007bff;
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+        }
+
+        .call-to-action-block h2 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 2.8rem;
+        }
+
+        .call-to-action-block p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+        }
+
+        .btn-main-cta {
+            background-color: #28a745;
+            /* Green button */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 35px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-main-cta:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .btn-back-link {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn-back-link:hover {
+            background-color: #5a6268;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Footer quick links for multi-page */
+        .footer-links a {
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #007bff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+        <nav class="navbar navbar-expand-md  tm-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Follwo Info Tech</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle tm-nav-link" href="#" id="servicesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="digitalmarketing.html">Result-Driven Digital
+                                    Marketing</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="cloud.html">Scalable Cloud Solutions</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="webdevelopment.html">Custom Web Development</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="datainsights.html">Data Analytics & Insights</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item font-weight-bold" href="services.html">All Services</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="career.html">Career</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="text-center tm-hero-text-container">
+            <div class="tm-hero-text-container-inner m-4" data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="tm-hero-title display-4 mb-4">Web App Development Services</h1>
+                <p class="tm-hero-subtitle lead mb-5">
+                    Build powerful, scalable, and user-centric web applications tailored to your business needs.<br />
+                    From concept to deployment — we craft digital solutions that deliver results.
+                </p>
+            </div>
+        </div>
+
+        <div class="tm-next tm-intro-next position-absolute bottom-0 w-100 pb-4">
+            <a href="#whatwedo" class="text-center tm-down-arrow-link d-block">
+                <i class="fas fa-2x fa-arrow-down tm-down-arrow text-white"></i>
+            </a>
+        </div>
+    </section>
+
+    <main class="tm-main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <div class="section-block">
+                        <h2>Your Shield in the Web Development World</h2>
+                        <p>Transform your ideas into powerful, scalable web applications. Our team designs and develops
+                            custom web solutions and e-commerce platforms that engage users, streamline operations, and
+                            fuel your business growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="section-block bg-primary-light">
+                        <h2>Our Comprehensive Web Development</h2>
+                        <div class="row mt-5">
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="fas fa-code service-icon"></i>
+                                    <h4>Custom Website Development</h4>
+                                    <ul>
+                                        <li>Custom design (UI/UX) aligned with your brand</li>
+                                        <li>Mobile & SEO-optimized development</li>
+                                        <li>CMS integration (WordPress, Webflow, custom)</li>
+                                        <li>Secure & scalable web hosting setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="150">
+                                    <i class="fas fa-shopping-cart service-icon"></i>
+                                    <h4>E-Commerce Development</h4>
+                                    <ul>
+                                        <li>Store design & setup</li>
+                                        <li>Product, cart & checkout flow customization</li>
+                                        <li>Payment & shipping integration</li>
+                                        <li>Performance optimization & tracking setup</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="fas fa-mobile-alt service-icon"></i>
+                                    <h4>Mobile App Development</h4>
+                                    <ul>
+                                        <li>UI/UX wireframing & prototyping</li>
+                                        <li>Android & iOS app development</li>
+                                        <li>API integration & cloud backend</li>
+                                        <li>App store submission & support</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="250">
+                                    <i class="fas fa-laptop-code service-icon"></i>
+                                    <h4>Custom Software Development</h4>
+                                    <ul>
+                                        <li>Requirement gathering & system design</li>
+                                        <li>Frontend & backend development</li>
+                                        <li>Secure database integration</li>
+                                        <li>Role-based access & admin dashboards</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="fas fa-project-diagram service-icon"></i>
+                                    <h4>Web App Development</h4>
+                                    <ul>
+                                        <li>Full-stack development (frontend + backend)</li>
+                                        <li>REST API or GraphQL integration</li>
+                                        <li>Role management, real-time data features</li>
+                                        <li>Scalable deployment on cloud (AWS, GCP, Azure)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="350">
+                                    <i class="fas fa-pencil-ruler service-icon"></i>
+                                    <h4>UI/UX Design Services</h4>
+                                    <ul>
+                                        <li>User journey mapping & wireframes</li>
+                                        <li>High-fidelity UI mockups</li>
+                                        <li>Responsive design system</li>
+                                        <li>Developer-ready design handoff</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="400">
+                                    <i class="fas fa-plug service-icon"></i>
+                                    <h4>API & Third-Party Integrations</h4>
+                                    <ul>
+                                        <li>REST API or GraphQL development</li>
+                                        <li>Secure third-party service integration</li>
+                                        <li>Webhooks & automation flows</li>
+                                        <li>CRM, ERP, payment, and analytics connectors</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="service-point" data-aos="fade-up" data-aos-delay="450">
+                                    <i class="fas fa-check-circle service-icon"></i>
+                                    <h4>QA Testing & Deployment</h4>
+                                    <ul>
+                                        <li>Functional & usability testing</li>
+                                        <li>Cross-browser/device compatibility checks</li>
+                                        <li>Performance & load testing</li>
+                                        <li>Final deployment & post-launch monitoring</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="section-block">
+                        <h2>Why Partner with Us for Cybersecurity?</h2>
+                        <div class="row mt-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="why-choose-us-item" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="icon-circle"><i class="fas fa-medal"></i></div>
+                                    <h4>Expertise & Experience</h4>
+                                    <p>Leverage a team of certified cybersecurity professionals with deep industry
+                                        knowledge and practical experience in tackling complex threats.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="why-choose-us-item" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="icon-circle"><i class="fas fa-fingerprint"></i></div>
+                                    <h4>Tailored Solutions</h4>
+                                    <p>We understand that every business is unique. Our solutions are customized to fit
+                                        your specific risk profile, industry requirements, and budget.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="why-choose-us-item" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="icon-circle"><i class="fas fa-lightbulb"></i></div>
+                                    <h4>Proactive & Predictive</h4>
+                                    <p>Beyond reacting to threats, we focus on proactive measures and predictive
+                                        analytics to anticipate and neutralize potential attacks before they impact your
+                                        operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="call-to-action-block">
+                        <h2 data-aos="fade-up">Ready to With Us?</h2>
+
+                        <a href="contact.html" class="btn btn-main-cta" data-aos="zoom-in" data-aos-delay="200">
+                            Conact Us <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 text-center">
+                    <a href="services.html" class="btn btn-back-link">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to All Services
+                    </a>
+                    <a href="services.html" class="btn btn-back-link">
+                        Back to Home <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Follo InfoTech</h5>
+                    <p class="text-white-50 small">
+                        We provide scalable, secure, and modern IT solutions tailored to accelerate your business
+                        success.
+                    </p>
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2025 Follo InfoTech. All rights reserved.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-home mr-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-handshake mr-2"></i>Services</a></li>
+                        <li class="mb-2"><a href="#clients" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-comment-alt mr-2"></i>Clients</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-images mr-2"></i>Portfolio</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-envelope mr-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Expertise -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Our Expertise</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="digitalmarketing.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-cloud mr-2"></i>Digital Marketing</a></li>
+                        <li class="mb-2"><a href="cloud.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-shield-alt mr-2"></i>Scalable Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="webdevelopment.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-chart-line mr-2"></i>Custom Web Development</a></li>
+                        <li class="mb-2"><a href="datainsights.html" class="text-white-50 text-decoration-none"><i
+                                    class="fas fa-hands-helping mr-2"></i>Data Analytics & Insights</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info (as before) -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4 text-primary">Get In Touch</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 IT Park Road, Peelamedu,
+                            Tiruppur, Tamil Nadu – 641605</li>
+                        <li class="mb-2"><i class="fas fa-phone mr-2"></i> +91 (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope mr-2"></i> info@youritconsulting.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-top border-secondary my-4">
+            <div class="row mt-4 text-center">
+                <div class="col-12">
+                    <h5 class="text-uppercase text-primary mb-3">Follow Us</h5>
+                    <div class="social-links d-flex justify-content-center mb-3">
+                        <a href="https://facebook.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://linkedin.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </a>
+                        <a href="https://instagram.com/yourcompany" target="_blank" class="text-white-50 mx-3"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                    <p class="text-white-50 small">
+                        Designed with <i class="fas fa-heart text-danger"></i> by <a href="https://www.tooplate.com"
+                            class="text-white-50" target="_blank" rel="nofollow">TOOPLATE</a> &amp; Developed by Your
+                        Company Name.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true
+        });
+
+        // Toggle dropdown on click
+        $('.dropdown-toggle').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).next('.dropdown-menu').slideToggle();
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown').length) {
+                $('.dropdown-menu').slideUp();
+            }
+        });
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) { // Adjust this value as needed
+                $('.tm-navbar').addClass('scroll');
+            } else {
+                $('.tm-navbar').removeClass('scroll');
+            }
+        });
+
+        // For this individual service page, smooth scroll is likely not needed
+        // but keeping it for consistency if any internal anchors are added later.
+        $('a[href^="#"]').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                var hash = this.hash;
+                if ($(hash).length) {
+                    $('html, body').animate(
+                        {
+                            scrollTop: $(hash).offset().top,
+                        },
+                        600,
+                        'easeInOutExpo'
+                    );
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
