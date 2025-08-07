@@ -210,7 +210,7 @@ blockquote {
 
 #infinite {
   background-color: #222;
-  background-image: url(../img/infinite-loop-01.jpg);
+  /* background-image: url(../img/infinite-loop-01.jpg); */
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 375px;
@@ -332,7 +332,7 @@ blockquote {
 /* Testimonials */
 #testimonials {
   color: white;
-  background-image: url(../img/infinite-loop-02.jpg);
+  background-image: url(../img/contact-info.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
