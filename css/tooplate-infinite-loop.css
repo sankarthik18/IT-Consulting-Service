@@ -97,11 +97,11 @@ blockquote {
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: rgb(14, 152, 239);
+  color: #38b;
 }
 
 .tm-navbar.scroll .navbar-brand {
-  color: rgb(14, 152, 239);
+  color: #369;
 }
 
 .nav-item {
@@ -113,8 +113,8 @@ blockquote {
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: rgb(14, 152, 239);
-  background-color: #1c1b1b;
+  color: #369;
+  background-color: #000;
 }
 
 @media (max-width: 767.98px) {
