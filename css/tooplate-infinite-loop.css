@@ -18,7 +18,7 @@ body {
 }
 a {
   transition: all 0.3s ease;
-  color: rgb(227, 209, 14);
+  color: #38b;
 }
 
 /* a:hover,
@@ -97,11 +97,11 @@ blockquote {
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: #38b;
+  color: rgb(14, 152, 239);
 }
 
 .tm-navbar.scroll .navbar-brand {
-  color: #369;
+  color: rgb(14, 152, 239);
 }
 
 .nav-item {
