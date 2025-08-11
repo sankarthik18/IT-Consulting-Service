@@ -132,7 +132,10 @@ blockquote {
   .navbar-collapse {
     background-color: white;
   }
-
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Remove the delay effect */
+  }
   .tm-nav-link,
   .dropdown-menu a,
   .dropdown-toggle {
