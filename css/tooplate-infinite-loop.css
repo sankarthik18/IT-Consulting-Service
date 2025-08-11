@@ -18,7 +18,7 @@ body {
 }
 a {
   transition: all 0.3s ease;
-  color: #38b;
+  color: rgb(227, 209, 14);
 }
 
 /* a:hover,
