@@ -407,9 +407,17 @@
         function getOffSet() {
             var _offset = 450;
             var windowHeight = window.innerHeight;
-            if (windowHeight > 500) { _offset = 400; }
-            if (windowHeight > 680) { _offset = 300; }
-            if (windowHeight > 830) { _offset = 210; }
+
+            if (windowHeight > 500) {
+                _offset = 400;
+            }
+            if (windowHeight > 680) {
+                _offset = 300;
+            }
+            if (windowHeight > 830) {
+                _offset = 210;
+            }
+
             return _offset;
         }
 
@@ -420,10 +428,14 @@
             $object.css({ 'background-position': bg_css });
         }
 
+        // Parallax function
+        // Adapted based on https://codepen.io/roborich/pen/wpAsm
         var background_image_parallax = function ($object, multiplier, forceSet) {
             multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
             multiplier = 1 - multiplier;
             var $doc = $(document);
+            // $object.css({"background-attatchment" : "fixed"});
+
             if (forceSet) {
                 setParallaxPosition($doc, multiplier, $object);
             } else {
@@ -446,6 +458,7 @@
                         yPos = Math.round(multiplier * (firstTop - pos) - 186);
 
                     var bg_css = 'center ' + yPos + 'px';
+
                     $object.css({ 'background-position': bg_css });
                 } else {
                     $object.css({ 'background-position': 'center' });
@@ -454,37 +467,42 @@
         };
 
         $(function () {
-            // Hero Section - Background Parallax (if applicable to career hero)
-            // background_image_parallax($('#career-hero'), 0.3, false); 
+            // Hero Section - Background Parallax
+            background_image_parallax($('.tm-parallax'), 0.3, false);
+            background_image_parallax_2($('#contact'), 0.8);
+            background_image_parallax_2($('#testimonials'), 0.8);
 
-            // Remove these if #contact and #testimonials are only on index.html
-            // background_image_parallax_2($('#contact'), 0.8);
-            // background_image_parallax_2($('#testimonials'), 0.8); // Changed #why-work-with-us testimonials to #why-work-with-us if used for parallax
-
+            // Handle window resize
             window.addEventListener(
                 'resize',
                 function () {
-                    // background_image_parallax($('#career-hero'), 0.3, true); 
+                    background_image_parallax($('.tm-parallax'), 0.3, true);
                 },
                 true
             );
 
-            // --- CORRECTED NAVBAR SCROLL BEHAVIOR FOR CAREER.HTML ---
-            // This will make the navbar white after scrolling more than 120px
-            $(window).scroll(function () {
-                if ($(document).scrollTop() > 120) { // You can adjust this '120' pixel value
+            // Detect window scroll and update navbar
+            $(window).scroll(function (e) {
+                if ($(document).scrollTop() > 120) {
                     $('.tm-navbar').addClass('scroll');
                 } else {
                     $('.tm-navbar').removeClass('scroll');
                 }
             });
-            // --- END CORRECTED NAVBAR SCROLL BEHAVIOR ---
 
-
+            // Close mobile menu after click
             $('#tmNav a').on('click', function () {
                 $('.navbar-collapse').removeClass('show');
             });
 
+            // // Scroll to corresponding section with animation
+            // $('#tmNav').singlePageNav({
+            //   'easing': 'easeInOutExpo',
+            //   'speed': 600
+            // });
+
+            // Add smooth scrolling to all links
+            // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
             $('a').on('click', function (event) {
                 if (this.hash !== '') {
                     event.preventDefault();
@@ -500,13 +518,10 @@
                             window.location.hash = hash;
                         }
                     );
-                }
+                } // End if
             });
 
-            // Slick Carousel and Magnific Popup (keep as is)
-            // Note: tm-gallery appears twice as a class in your original code, once for magnificPopup and once for slick.
-            // If tm-gallery is meant for a gallery, keep it. If it's a general class, ensure its usage is consistent.
-            // Based on the code, you have two slick carousels/galleries.
+            // Pop up
             $('.tm-gallery').magnificPopup({
                 delegate: 'a',
                 type: 'image',
@@ -521,29 +536,96 @@
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 responsive: [
-                    { breakpoint: 992, settings: { slidesToShow: 2 } },
-                    { breakpoint: 768, settings: { slidesToShow: 2 } },
-                    { breakpoint: 480, settings: { slidesToShow: 1 } },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                        },
+                    },
                 ],
             });
 
-            // This seems to be for another gallery/carousel, distinct from the testimonials one.
-            // If .tm-gallery is used for both a lightbox and a carousel, you might need to give
-            // the carousel a more specific class to avoid conflicts.
-            // Assuming this is intended for a separate image gallery carousel.
+            // Gallery
             $('.tm-gallery').slick({
                 dots: true,
                 infinite: false,
                 slidesToShow: 5,
                 slidesToScroll: 2,
                 responsive: [
-                    { breakpoint: 1199, settings: { slidesToShow: 4, slidesToScroll: 2 } },
-                    { breakpoint: 991, settings: { slidesToShow: 3, slidesToScroll: 2 } },
-                    { breakpoint: 767, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-                    { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+                    {
+                        breakpoint: 1199,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 2,
+                        },
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
                 ],
             });
         });
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.tm-navbar');
+            const testimonialsSection = document.getElementById('testimonials');
+            const contactSection = document.getElementById('contact');
+
+            function isSectionVisible(section) {
+                if (!section) return false;
+
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Check if any part of the section is in view
+                return rect.top < windowHeight && rect.bottom > 0;
+            }
+
+            function updateNavbarBackground() {
+                if (isSectionVisible(testimonialsSection) || isSectionVisible(contactSection)) {
+                    navbar.classList.add('scroll');
+                } else {
+                    navbar.classList.remove('scroll');
+                }
+            }
+
+            // Scroll listener
+            window.addEventListener('scroll', updateNavbarBackground);
+
+            // Trigger once on page load
+            updateNavbarBackground();
+        });
+
     </script>
 </body>
 
