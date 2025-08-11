@@ -598,30 +598,9 @@
         document.addEventListener('DOMContentLoaded', function () {
             const navbar = document.querySelector('.tm-navbar');
             const navbarCollapse = document.querySelector('.navbar-collapse');
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const testimonialsSection = document.getElementById('testimonials');
-            const contactSection = document.getElementById('contact');
+            const navbarToggler = document.querySelector('.navbar-toggler'); const testimonialsSection = document.getElementById('testimonials');
 
-            // Function to check if section is in view
-            function isSectionVisible(section) {
-                if (!section) return false;
-                const rect = section.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-                return rect.top < windowHeight && rect.bottom > 0;
-            }
 
-            // Change navbar background when sections are visible
-            function updateNavbarBackground() {
-                if (isSectionVisible(testimonialsSection) || isSectionVisible(contactSection)) {
-                    navbar.classList.add('scroll');
-                } else {
-                    navbar.classList.remove('scroll');
-                }
-            }
-
-            // Scroll listener for background change
-            window.addEventListener('scroll', updateNavbarBackground);
-            updateNavbarBackground();
 
             // Hover dropdown for tablet & desktop only
             if (window.innerWidth >= 768) {
@@ -646,6 +625,33 @@
                     navbarToggler.click();
                 }
             });
+        });
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) { // Adjust this value as needed
+                $('.tm-navbar').addClass('scroll');
+            } else {
+                $('.tm-navbar').removeClass('scroll');
+            }
+        });
+
+        // For this individual service page, smooth scroll is likely not needed
+        // but keeping it for consistency if any internal anchors are added later.
+        $('a[href^="#"]').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                var hash = this.hash;
+                if ($(hash).length) {
+                    $('html, body').animate(
+                        {
+                            scrollTop: $(hash).offset().top,
+                        },
+                        600,
+                        'easeInOutExpo'
+                    );
+                }
+            }
         });
     </script>
 </body>
