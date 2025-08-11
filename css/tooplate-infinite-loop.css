@@ -172,32 +172,26 @@ blockquote {
   color: #fff;
   background-color: #369;
 }
-/*
-.tm-navbar.scroll .dropdown-toggle.tm-nav-link:hover,
-.tm-navbar.scroll .dropdown-toggle.tm-nav-link:focus,
-.tm-navbar.scroll .dropdown-toggle.tm-nav-link[aria-expanded="true"] {
-  color: #fff !important;
-} */
 
 .navbar-toggler {
-  border: 1px solid white;
+  border: 2px solid white;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* .navbar-toggler-icon {
+.navbar-toggler-icon {
   color: white;
   padding-top: 6px;
 }
 
 .tm-navbar.scroll .navbar-toggler {
-  border: 1px solid #707070;
+  border: 2px solid #707070;
 }
 
 .tm-navbar.scroll .navbar-toggler-icon {
   color: #707070;
 }
-.tm-navbar.scroll .dropdown-toggle.tm-nav-link {
+/* .tm-navbar.scroll .dropdown-toggle.tm-nav-link {
   color: #369;
 } */
 
