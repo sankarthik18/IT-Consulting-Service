@@ -127,15 +127,18 @@ blockquote {
     text-align: left;
   }
 }
+@media (min-width: 768px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
 /* === MOBILE NAVBAR TEXT COLOR FIX === */
 @media (max-width: 767.98px) {
   .navbar-collapse {
     background-color: white;
   }
-  .navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; /* Remove the delay effect */
-  }
+
   .tm-nav-link,
   .dropdown-menu a,
   .dropdown-toggle {
@@ -147,7 +150,7 @@ blockquote {
   }
 
   .dropdown-menu a:hover {
-    background-color: #369;
+    background-color: rgb(253, 254, 255);
     color: #000;
   }
 
@@ -158,14 +161,15 @@ blockquote {
   .navbar-toggler-icon {
     color: #fff;
   }
+
   .tm-nav-link.current,
   .tm-navbar.scroll .tm-nav-link.current {
-    background-color: transparent !important; /* Remove the dark blue */
-    color: #000 !important; /* Optional: use standard text color */
+    background-color: transparent !important;
+    color: #000 !important;
   }
 
   .tm-nav-link {
-    background-color: transparent !important; /* Default mobile links background */
+    background-color: transparent !important;
   }
 }
 
