@@ -138,6 +138,10 @@ blockquote {
   .navbar-collapse {
     background-color: white;
   }
+  /* .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  } */
 
   .tm-nav-link,
   .dropdown-menu a,
@@ -150,7 +154,7 @@ blockquote {
   }
 
   .dropdown-menu a:hover {
-    background-color: rgb(253, 254, 255);
+    background-color: rgb(139, 146, 154);
     color: #000;
   }
 
@@ -161,15 +165,14 @@ blockquote {
   .navbar-toggler-icon {
     color: #fff;
   }
-
   .tm-nav-link.current,
   .tm-navbar.scroll .tm-nav-link.current {
-    background-color: transparent !important;
-    color: #000 !important;
+    background-color: transparent !important; /* Remove the dark blue */
+    color: #000 !important; /* Optional: use standard text color */
   }
 
   .tm-nav-link {
-    background-color: transparent !important;
+    background-color: transparent !important; /* Default mobile links background */
   }
 }
 

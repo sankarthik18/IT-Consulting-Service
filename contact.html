@@ -127,7 +127,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars navbar-toggler-icon"></i>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -563,42 +563,56 @@
         });
         document.addEventListener('DOMContentLoaded', function () {
             const navbar = document.querySelector('.tm-navbar');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
             const testimonialsSection = document.getElementById('testimonials');
             const contactSection = document.getElementById('contact');
-            function updateNavbarBackground() {
-                const scrollPosition = window.scrollY;
-                const windowHeight = window.innerHeight;
-                let shouldBeWhite = false;
-                if (testimonialsSection) {
-                    const testimonialsTop = testimonialsSection.offsetTop;
-                    const testimonialsBottom = testimonialsTop + testimonialsSection.offsetHeight;
-                    if (scrollPosition + windowHeight * 0.2 >= testimonialsTop && scrollPosition < testimonialsBottom) {
-                        shouldBeWhite = true;
-                    }
-                }
-                if (contactSection) {
-                    const contactTop = contactSection.offsetTop;
-                    const contactBottom = contactTop + contactSection.offsetHeight;
-                    if (scrollPosition + windowHeight * 0.2 >= contactTop && scrollPosition < contactBottom) {
-                        shouldBeWhite = true;
-                    }
-                }
 
-                if (shouldBeWhite) {
+            // Function to check if section is in view
+            function isSectionVisible(section) {
+                if (!section) return false;
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                return rect.top < windowHeight && rect.bottom > 0;
+            }
+
+            // Change navbar background when sections are visible
+            function updateNavbarBackground() {
+                if (isSectionVisible(testimonialsSection) || isSectionVisible(contactSection)) {
                     navbar.classList.add('scroll');
                 } else {
                     navbar.classList.remove('scroll');
                 }
             }
 
-            // Add scroll event listener
+            // Scroll listener for background change
             window.addEventListener('scroll', updateNavbarBackground);
-
-            // Call it once on load to set the initial state (e.g., if page loads already scrolled)
             updateNavbarBackground();
+
+            // Hover dropdown for tablet & desktop only
+            if (window.innerWidth >= 768) {
+                document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+                    dropdown.addEventListener('mouseenter', function () {
+                        this.classList.add('show');
+                        this.querySelector('.dropdown-menu').classList.add('show');
+                    });
+                    dropdown.addEventListener('mouseleave', function () {
+                        this.classList.remove('show');
+                        this.querySelector('.dropdown-menu').classList.remove('show');
+                    });
+                });
+            }
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideNavbar = navbar.contains(event.target);
+                const isMenuOpen = navbarCollapse.classList.contains('show');
+
+                if (!isClickInsideNavbar && isMenuOpen) {
+                    navbarToggler.click();
+                }
+            });
         });
-
-
     </script>
 </body>
 

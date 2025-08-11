@@ -285,7 +285,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars navbar-toggler-icon"></i>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -876,22 +876,22 @@
                 ],
             });
         });
-        // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function () {
             const navbar = document.querySelector('.tm-navbar');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
             const testimonialsSection = document.getElementById('testimonials');
             const contactSection = document.getElementById('contact');
 
+            // Function to check if section is in view
             function isSectionVisible(section) {
                 if (!section) return false;
-
                 const rect = section.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
-
-                // Check if any part of the section is in view
                 return rect.top < windowHeight && rect.bottom > 0;
             }
 
+            // Change navbar background when sections are visible
             function updateNavbarBackground() {
                 if (isSectionVisible(testimonialsSection) || isSectionVisible(contactSection)) {
                     navbar.classList.add('scroll');
@@ -900,12 +900,35 @@
                 }
             }
 
-            // Scroll listener
+            // Scroll listener for background change
             window.addEventListener('scroll', updateNavbarBackground);
-
-            // Trigger once on page load
             updateNavbarBackground();
+
+            // Hover dropdown for tablet & desktop only
+            if (window.innerWidth >= 768) {
+                document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+                    dropdown.addEventListener('mouseenter', function () {
+                        this.classList.add('show');
+                        this.querySelector('.dropdown-menu').classList.add('show');
+                    });
+                    dropdown.addEventListener('mouseleave', function () {
+                        this.classList.remove('show');
+                        this.querySelector('.dropdown-menu').classList.remove('show');
+                    });
+                });
+            }
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideNavbar = navbar.contains(event.target);
+                const isMenuOpen = navbarCollapse.classList.contains('show');
+
+                if (!isClickInsideNavbar && isMenuOpen) {
+                    navbarToggler.click();
+                }
+            });
         });
+
 
     </script>
 </body>
