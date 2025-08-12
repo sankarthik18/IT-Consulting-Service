@@ -277,6 +277,7 @@ blockquote {
   bottom: 100px;
   left: 0;
   right: 0;
+  top: 100px;
 }
 
 @media (max-height: 480px) {
