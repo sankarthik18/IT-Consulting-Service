@@ -274,10 +274,9 @@ blockquote {
 
 .tm-intro-next {
   position: absolute;
-  bottom: 100px;
+  bottom: 500px;
   left: 0;
   right: 0;
-  top: 100px;
 }
 
 @media (max-height: 480px) {
