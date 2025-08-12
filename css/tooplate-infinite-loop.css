@@ -19,13 +19,14 @@ body {
 a {
   transition: all 0.3s ease;
   color: #38b;
+  text-decoration: none; /* No underline by default */
 }
 
-/* a:hover,
+a:hover,
 a:focus {
-  text-decoration: none;
-  color: #d40;
-} */
+  text-decoration: none; /* Prevent underline on hover/focus */
+  color: #d40; /* Optional hover color */
+}
 
 a:focus {
   outline: none;
