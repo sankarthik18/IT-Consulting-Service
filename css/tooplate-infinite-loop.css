@@ -90,7 +90,7 @@ blockquote {
   border-bottom: 1px solid #e9ecef;
 }
 
-.navbar-brand {
+/* .navbar-brand {
   color: white;
   font-size: 1.4rem;
   font-weight: bold;
@@ -103,8 +103,49 @@ blockquote {
 
 .tm-navbar.scroll .navbar-brand {
   color: rgb(12, 114, 215);
+} */
+.navbar-brand {
+  /* Retained from your old CSS */
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  /* New styles for a flexible logo and text layout */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
+.navbar-brand:hover {
+  /* Your old hover color */
+  color: rgb(12, 114, 215);
+}
+
+.tm-navbar.scroll .navbar-brand {
+  /* Your old scroll color */
+  color: rgb(12, 114, 215);
+}
+
+/* Style the logo image specifically */
+.navbar-brand .logo {
+  /* The height of the logo on larger screens */
+  height: 40px;
+  /* The space between the logo and the text */
+  margin-right: 10px;
+}
+
+/* Responsive styles for the logo */
+@media (max-width: 991px) {
+  .navbar-brand .logo {
+    height: 35px; /* Smaller logo for tablets */
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand .logo {
+    height: 30px; /* Even smaller logo for mobile */
+  }
+}
 .nav-item {
   list-style: none;
 }
